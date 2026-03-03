@@ -43,19 +43,48 @@ p {
     line-height: 28px;
 }
 
+a {
+    text-decoration: none;
+    color: #2661ca;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #A8B0EC !important;
+}
+
 .window {
     padding: 30px 20px 0px 20px;
     border: 3px solid #2661ca;
     border-radius: 10px;
     position: relative;
     background-color: rgba(255, 255, 255, 0.482);
-    transition: 0.6s;
+    backdrop-filter: blur(2px);
+    transition: margin 0.6s, box-shadow 0.6s, background-color 0.6s;
+    
 }
 
 .window:hover {
     margin-top: -5px;
     margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.753);
     box-shadow: 0 10px 10px #ffe1f286;
+}
+
+.dark .window {
+    border-color: #ffe1f2;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.222);
+}
+
+.dark .window:hover {
+    background-color: rgba(255, 255, 255, 0.395);
+    box-shadow: 0 10px 10px #A8B0EC86;
+}
+
+.window-link {
+    display: block;
+    width: min-content;
 }
 
 .window-head {
@@ -67,6 +96,11 @@ p {
     height: 2rem;
     border-bottom: 3px solid #2661ca;
     border-radius: 7px 7px 0 0;
+}
+
+.dark .window-head {
+    border-color: #ffe1f2;
+    background-color: #539aea84;
 }
 
 .window-url .window-head {
@@ -118,6 +152,71 @@ p {
     background-color:#539aea;
 }
 
+@media screen and (max-width: 900px) {
+    .window.mini {
+        position: relative;
+        border-color: #00000000;
+        background-color:#00000000;
+        backdrop-filter: blur(0px);
+        transition: margin 0.6s, box-shadow 0.6s, background-color 0.6s, backdrop-filter 0.6s;
+        box-sizing: border-box;
+    }
+
+    .window.mini:hover {
+        backdrop-filter: blur(2px);
+        background-color: #ffffffbf;
+        transition-delay: 0.6s;
+    }
+
+    .window.mini > * {
+        z-index:1;
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    .window.mini > h1, .window.mini > h2, .window.mini > p {
+        position: relative;
+    }
+
+    .window.mini:hover > * {
+        opacity: 1;
+        transition: 1s;
+        transition-delay: 0.6s;
+    }
+
+    .window.mini::before {
+        z-index:0;
+        content: " ";
+        display: block;
+        position: absolute;
+        top: -3px;
+        width: 2rem;
+        height: 2rem;
+        background-color:#539aea;
+        border: 3px solid #2661ca;
+        border-radius: 10px;
+        transition: 0.6s;
+        transition-delay: 0.1s;
+    }
+
+    .window.mini.mini-right::before {
+        right: -3px;
+    }
+
+    .window.mini.mini-left::before {
+        left: -3px;
+    }
+
+    .window.mini:hover::before {
+        width: 100%;
+        height: 100%;
+        background-color:#00000000;
+        transition-delay: 0s;
+    }
+
+}
+
+
 
 
 
@@ -145,6 +244,7 @@ nav {
     justify-content: center;
     
     box-shadow: 0 10px 10px #ffe1f286;
+    z-index: 999;
 }
 
 #nav-content-container {
@@ -175,26 +275,78 @@ nav a {
 }
 
 #about {
-    /* display: block;
-    width: 100%; */
+    padding: 50px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
 }
 
 #about-portrait {
     width: 70vw;
     max-width: 500px;
+    padding-left: 40px;
     display: block;
     margin: auto;
 }
 
-@media screen and (max-width: 480px) {
-  body {
-    /* background-color: lightgreen; */
-  }
+#about-content-container {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: grid;
+    grid-template-columns: auto 16vw auto;
+}
+
+@media screen and (max-width: 900px) {
+   #about-content-container {
+        grid-template-columns: auto 0 auto;
+    }
+}
+
+#about-content-container > div {
+    position:relative;
+}
+
+#about-window-1 {
+    width: 330px;
+    position: absolute;
+    top: 120px;
+    right:0;
+    /* transition: 0.2s; */
+}
+
+#about-window-2 {
+    width: 270px;
+    position: absolute;
+    top: 350px;
+    left: 40px;
+    /* transition: 0.2s; */
+}
+
+#about-window-3 {
+    width: 250px;
+    position: absolute;
+    
+    top: 540px;
+    right: -20px;
+    /* transition: 0.2s; */
+}
+
+@media screen and (max-width: 900px) {
+    #about-window-3 {
+        position: sticky;
+        top: 540px;
+        /* left: 20vw; */
+    }
 }
 
 
 #project {
-    padding: 40px;
+    padding: 50px 10vw;
+    background-color: #2661ca;
 }
 
 #project-title-window {
@@ -204,6 +356,10 @@ nav a {
 
 #illustration {
     padding: 40px;
+}
+
+#illustration-title-window {
+    width: 250px;
 }
 
 
