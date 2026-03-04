@@ -1,3 +1,16 @@
+html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre {margin:0;padding:0}
+button,fieldset,form,input,legend,textarea,select {margin:0;padding:0}
+fieldset {border:0}
+a,a * {cursor:pointer}
+div {margin:0;padding:0;background-color:transparent;text-align:left}
+hr,img {border:0}
+applet,iframe,object {border:0;margin:0;padding:0}
+button,input[type=button],input[type=image],input[type=reset],input[type=submit],label {cursor:pointer;}
+ul,li {list-style:none;margin:0;padding:0;}
+strong {font-weight:bold;}
+em {font-style:italic;} 
+
+
 body {
     margin: 0;
     width: 100vw;
@@ -36,11 +49,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+    margin: 1.2rem 0;
 }
 
 p {
     font-size: 18px;
     line-height: 28px;
+    margin: 1rem 0;
 }
 
 a {
@@ -51,6 +66,19 @@ a {
 
 a:hover {
     color: #A8B0EC !important;
+}
+
+.button {
+    padding: 10px;
+    border: 3px solid #2661ca;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    color: #539aea;
+    border-color: #539aea;
+    cursor: pointer;
 }
 
 .window {
@@ -220,7 +248,7 @@ a:hover {
 
 
 
-
+/* HEADER ******************************************************************************************************************************/
 
 #header {
     height: 500px;
@@ -273,6 +301,9 @@ nav > img {
 nav a {
     margin: 0 2vw;
 }
+
+
+/* ABOUT ******************************************************************************************************************************/
 
 #about {
     padding: 50px;
@@ -344,6 +375,7 @@ nav a {
 }
 
 
+/* PROJECT ******************************************************************************************************************************/
 
 #project-body {
     padding: 100px 10vw 15vw 10vw;
@@ -384,7 +416,7 @@ nav a {
 
 
 
-
+/* ILLUSTRATION ******************************************************************************************************************************/
 
 #illustration {
     padding: 100px 10vw 15vw 10vw;
@@ -398,23 +430,160 @@ nav a {
 
 
 
+/* FOOTER ******************************************************************************************************************************/
 
 #footer {
     margin: 0;
-    padding: 0;
+    position: relative;
+    background-image: linear-gradient(to bottom, white, #ffe1f2a5); 
 }
 
-#footer-window {
-    margin: 40px;
+#footer-padder {
+    height: 200px;
+}
+
+/* Bottom *************************************************************************/
+
+#footer-end-container {
+    width: 100%;
+    height: 150px;
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
 }
 
 #footer-end {
-    width: 101%;
+    height: 150px;
     margin-bottom: -5px;
+    position: relative;
 }
 
 #footer-end-end {
     width: 100%;
     height: 10px;
     background-color: #083889;
+}
+
+/* Window *************************************************************************/
+
+#footer-window {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+    box-sizing: border-box;
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+#footer-content {
+    display: grid;
+    grid-template-columns: auto 400px;
+    gap: 40px;
+    min-height: 400px;
+    margin-bottom: 2.4rem;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 1200px) {
+    #footer-window {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #footer-window {
+        width: 90%;
+    }
+
+    #footer-content {
+        grid-template-columns: auto;
+        gap: 0px;
+        min-height: auto;
+    }
+}
+
+#footer p > a {
+    color: #539aea;
+}
+
+#footer-buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+#footer-buttons > .wide {
+    grid-column: 1 / span 2;
+}
+
+#footer-buttons > .button {
+    background-color: #fff3fa;
+}
+
+#footer-buttons > .button:nth-child(3) {
+    background-color: #e3e5f9;
+}
+
+#footer-buttons > .button:nth-child(4) {
+    background-color: #d6e7fa;
+}
+
+#footer-image {
+    margin-top: 1.2rem;
+    border: 3px solid #2661ca;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Background *************************************************************************/
+
+#footer-back-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#footer-back-cloud-right {
+    width: 600px;
+    position: absolute;
+    right: -50px;
+    bottom: 5vw;
+}
+
+#footer-back-cloud-left {
+    width: 600px;
+    position: absolute;
+    left: -150px;
+    bottom: 5vw;
+}
+
+.footer-light-clouds {
+    position: absolute;
+    height: 140px;
+}
+
+.footer-light-clouds:nth-child(1) {
+    top: 0;
+    left: 200px;
+    height: 100px;
+}
+
+.footer-light-clouds:nth-child(2) {
+    bottom: 600px;
+    left: -50px;
+}
+
+.footer-light-clouds:nth-child(3) {
+    bottom: 500px;
+    right: -80px;
+}
+
+.footer-light-clouds:nth-child(4) {
+    top: 120px;
+    right: 200px;
+    height: 120px;
 }
