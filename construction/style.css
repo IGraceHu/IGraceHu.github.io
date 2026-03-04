@@ -23,6 +23,10 @@ body {
     color: #539aea;
 }
 
+.text-lightpink {
+    color: #ffe1f2;
+}
+
 .highlight {
     color: #539aea;
     background-color: #ffe1f2;
@@ -147,6 +151,9 @@ a:hover {
     z-index: 1;
 }
 
+.dark .window-head-url {
+    border-color: #ffe1f2;
+}
 
 .window-buttons {
     margin: 5px;
@@ -180,7 +187,7 @@ a:hover {
     background-color:#539aea;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
     .window.mini {
         position: relative;
         border-color: #00000000;
@@ -193,12 +200,14 @@ a:hover {
     .window.mini:hover {
         backdrop-filter: blur(2px);
         background-color: #ffffffbf;
-        transition-delay: 0.6s;
+        /* Delays window effects from appearing too early when hovered over */
+        transition-delay: 0.6s; 
     }
 
     .window.mini > * {
         z-index:1;
         opacity: 0;
+        /* Quickens window content disappearing when hover off */
         transition: 0.2s;
     }
 
@@ -209,7 +218,8 @@ a:hover {
     .window.mini:hover > * {
         opacity: 1;
         transition: 1s;
-        transition-delay: 0.6s;
+        /* Delays window content from appearing too early when hovered over ONLY */
+        transition-delay: 0.3s;
     }
 
     .window.mini::before {
@@ -218,12 +228,13 @@ a:hover {
         display: block;
         position: absolute;
         top: -3px;
-        width: 2rem;
-        height: 2rem;
+        width: 4rem;
+        height: 4rem;
         background-color:#539aea;
         border: 3px solid #2661ca;
         border-radius: 10px;
-        transition: 0.6s;
+        transition: width 0.6s, height 0.6s, background-color 2s;
+        /* Slightly delays shrinking when hover off */
         transition-delay: 0.1s;
     }
 
@@ -239,6 +250,7 @@ a:hover {
         width: 100%;
         height: 100%;
         background-color:#00000000;
+        /* Removes original delay to speed up expand when hovered over */
         transition-delay: 0s;
     }
 
@@ -331,14 +343,15 @@ nav a {
     grid-template-columns: auto 16vw auto;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
    #about-content-container {
         grid-template-columns: auto 0 auto;
+        margin: 0 10px;
     }
 }
 
 #about-content-container > div {
-    position:relative;
+    position: relative;
 }
 
 #about-window-1 {
@@ -366,11 +379,18 @@ nav a {
     /* transition: 0.2s; */
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
+    #about-window-1 {
+        left: 50px;
+    }
+
+    #about-window-2 {
+        right: 50px;
+        left: auto;
+    }
+
     #about-window-3 {
-        position: sticky;
-        top: 540px;
-        /* left: 20vw; */
+        left: 100px;
     }
 }
 
@@ -381,36 +401,89 @@ nav a {
     padding: 100px 10vw 15vw 10vw;
     box-sizing: border-box;
     background-color: #2661ca;
+    background-image: radial-gradient(#5caed6 30%, #2661ca 70%);
+}
+
+#project-title-window {
+    width: 250px;
+}
+
+#project-rolf-window {
+    margin-left: calc(3vw + 10px);
+    margin-top: -190px;
+}
+
+#project-rolf-window > div {
+    width: 480px;
+}
+
+#project-rolf-image-window {
+    margin-left: auto;
+    margin-top: -40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+#rolf-image {
+    width: 100%;
+    border: 3px solid #ffe1f2;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+    #project-rolf-image-window {
+        margin-top: 10px;
+    }
 }
 
 #project-start {
     width: 100%;
     height: 25vw;
+    min-height: 400px;
     margin-bottom: -10px;
     position: relative;
+}
+
+#project-start > .project-cloud-left {
+    position: absolute;
+    height: 25vw;
+    min-height: 300px;
+    left: 0px;
+    bottom:0px;
+}
+
+#project-start > .project-cloud-right {
+    position: absolute;
+    height: 25vw;
+    min-height: 300px;
+    right: 0px;
+    bottom:0px;
 }
 
 #project-end {
     width: 100%;
     height: 10vw;
+    min-height: 200px;
     margin-top: -9vw;
     position: relative;
 }
 
-.project-cloud-left {
+#project-end > .project-cloud-left {
     position: absolute;
+    height: 10vw;
+    min-height: 100px;
     left: 0px;
-    height: inherit;
+    top:0px;
 }
 
-.project-cloud-right {
+#project-end > .project-cloud-right {
     position: absolute;
+    height: 10vw;
+    min-height: 100px;
     right: 0px;
-    height: inherit;
-}
-
-#project-title-window {
-    width: 250px;
+    top:0px;
 }
 
 
