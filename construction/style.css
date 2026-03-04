@@ -361,7 +361,7 @@ nav a {
 #project-end {
     width: 100%;
     height: 10vw;
-    margin-top: -10vw;
+    margin-top: -9vw;
     position: relative;
 }
 
@@ -387,7 +387,7 @@ nav a {
 
 
 #illustration {
-    padding: 40px;
+    padding: 100px 10vw 15vw 10vw;
 }
 
 #illustration-title-window {
@@ -401,6 +401,7 @@ nav a {
 
 #footer {
     margin: 0;
+    padding: 0;
 }
 
 #footer-window {
@@ -409,4 +410,11 @@ nav a {
 
 #footer-end {
     width: 101%;
+    margin-bottom: -5px;
+}
+
+#footer-end-end {
+    width: 100%;
+    height: 10px;
+    background-color: #083889;
 }
