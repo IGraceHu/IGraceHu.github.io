@@ -86,6 +86,7 @@ button, .button {
     border: 3px solid #2661ca;
     border-radius: 10px;
     transition: 0.2s;
+    font-family: 'Menlo', 'Courier New', Courier, monospace;
 }
 
 button:hover, .button:hover {
@@ -561,6 +562,29 @@ nav a {
 
 #footer-buttons > .button:nth-child(4) {
     background-color: #d6e7fa;
+}
+
+.button.out {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+#footer-buttons svg {
+    height: 1rem;
+}
+
+.arrow-out {
+    fill: none;
+    stroke: #2661ca;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 4px;     
+}
+
+.button:hover svg > * {
+    stroke: #a8b0ec;
 }
 
 #footer-image {

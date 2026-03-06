@@ -24,6 +24,10 @@
     padding: 10px;
 }
 
+h3 {
+    color: #539aea;
+}
+
 #resume-exp {
     grid-column: 1 / span 2;
     display: grid;

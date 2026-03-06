@@ -93,11 +93,61 @@
     position: relative;
 }
 
-
+#rolf-ideate .window {
+    position: relative;
+    z-index: 1;
+}
 
 #rolf-ideate > p {
     max-width: 720px;
     /* margin: 40px 0; */
+    position: relative;
+    z-index: 1;
+}
+
+#rolf-wireframes {
+    position: absolute;
+    right: -80px;
+    top: 0;
+    z-index: 0;
+    transition: 0.6s;
+    height: 900px;
+    overflow: hidden;
+}
+
+#rolf-wireframes > img {
+    width: 400px;
+    border: 1px black solid;
+}
+
+.fade-white-top {
+    position: absolute;
+    width: 100%;
+    background-image:linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+    height: 100px;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+.fade-white-bottom {
+    position: absolute;
+    width: 100%;
+    background-image:linear-gradient(to top, white, rgba(255, 255, 255, 0));
+    height: 500px;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1460px) {
+    #rolf-wireframes {
+        opacity: 0.3;
+    }
+
+    .fade-white-top {
+        opacity: 1;
+    }
 }
 
 
