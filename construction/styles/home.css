@@ -11,12 +11,24 @@
     font-size: 18px;
 }
 
-#about-portrait {
+#about-portrait-wrapper {
     width: 70vw;
     max-width: 500px;
     padding-left: 40px;
     display: block;
     margin: auto;
+    position: relative;
+    z-index: 1;
+    height: fit-content;
+}
+
+#about-portrait {
+    width: 70vw;
+    max-width: 500px;
+    padding-left: 40px;
+    display: block;
+    position: relative;
+    z-index: 1;
 }
 
 #about-content-container {
@@ -27,6 +39,7 @@
     left: 0;
     display: grid;
     grid-template-columns: auto 16vw auto;
+    z-index: 9;
 }
 
 @media screen and (max-width: 800px) {
@@ -78,6 +91,40 @@
     #about-window-3 {
         left: 100px;
     }
+}
+
+#about-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0
+}
+
+#about-bg-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#about-bg .cloud-1 {
+    position: absolute;
+    width: 360px;
+    left: -30px;
+    top: 300px;
+}
+
+#about-bg .cloud-2 {
+    position: absolute;
+    width: 360px;
+    right: -30px;
+    top: 500px;
+}
+
+#about-bg .cloud-3 {
+    position: absolute;
+    width: 220px;
+    right: 300px;
+    top: 100px;
 }
 
 
