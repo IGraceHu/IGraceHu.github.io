@@ -5,7 +5,10 @@
     position: relative;
     width: 100%;
     box-sizing: border-box;
+}
 
+#about > p {
+    font-size: 18px;
 }
 
 #about-portrait {
