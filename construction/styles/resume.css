@@ -1,0 +1,51 @@
+#resume-window {
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    box-sizing: border-box;
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    #resume-window {
+        width: 90%;
+    }
+}
+
+#resume-content {
+    display: grid;
+    grid-template-columns: 400px auto;
+    gap: 40px;
+    min-height: 400px;
+    margin-bottom: 2.4rem;
+    transition: 0.2s;
+    padding: 10px;
+}
+
+#resume-exp {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+}
+
+#resume-window p {
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    #resume-content {
+        grid-template-columns: auto;
+        gap: 15px;
+        min-height: auto;
+    }
+
+    #resume-exp {
+        grid-column: 1 / span 1;
+        grid-template-columns: auto;
+        gap: 10px;
+    }
+}
