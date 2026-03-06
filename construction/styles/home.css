@@ -131,8 +131,57 @@
 
 #illustration {
     padding: 100px 10vw 15vw 10vw;
+    height: 60vw;
+    position: relative;
 }
 
 #illustration-title-window {
     width: 250px;
+    position: relative;
+    z-index: 1;
+}
+
+#illustration-images {
+    position: absolute;
+    top: 100px;
+    left: -5%;
+    width: 110%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    transition: 1s;
+    z-index: 0;
+}
+
+@media screen and (max-width: 800px) {
+    #illustration-images {
+        top: 200px;
+    }
+}
+
+#illustration-images > div {
+    display:block;
+    position: relative;
+}
+
+#illustration-images img {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#folly {
+    margin-top: 80%;
+}
+
+#blooming {
+    margin-top: 70%;
+}
+
+#wings {
+    margin-top: 55%;
+}
+
+#dorm {
+    margin-top: 20%;
 }
