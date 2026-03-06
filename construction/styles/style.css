@@ -6,7 +6,7 @@ div {margin:0;padding:0;background-color:transparent;text-align:left}
 hr,img {border:0}
 applet,iframe,object {border:0;margin:0;padding:0}
 button,input[type=button],input[type=image],input[type=reset],input[type=submit],label {cursor:pointer;}
-ul,li {list-style:none;margin:0;padding:0;}
+ul,li {margin:0;padding:0;}
 strong {font-weight:bold;}
 em {font-style:italic;} 
 
@@ -56,8 +56,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1.2rem 0;
 }
 
-p {
-    font-size: 18px;
+p, li {
+    font-size: 16px;
     line-height: 28px;
     margin: 1rem 0;
 }
@@ -81,14 +81,14 @@ a.active:hover {
     cursor: default;
 }
 
-.button {
-    padding: 10px;
+button, .button {
+    padding: 10px 20px;
     border: 3px solid #2661ca;
     border-radius: 10px;
     transition: 0.2s;
 }
 
-.button:hover {
+button:hover, .button:hover {
     color: #539aea;
     border-color: #539aea;
     cursor: pointer;
@@ -112,17 +112,6 @@ a.active:hover {
     box-shadow: 0 10px 10px #ffe1f286;
 }
 
-.dark .window {
-    border-color: #ffe1f2;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.222);
-}
-
-.dark .window:hover {
-    background-color: rgba(255, 255, 255, 0.395);
-    box-shadow: 0 10px 10px #A8B0EC86;
-}
-
 .window-link {
     display: block;
     width: min-content;
@@ -137,11 +126,6 @@ a.active:hover {
     height: 2rem;
     border-bottom: 3px solid #2661ca;
     border-radius: 7px 7px 0 0;
-}
-
-.dark .window-head {
-    border-color: #ffe1f2;
-    background-color: #539aea84;
 }
 
 .window-url .window-head {
@@ -160,9 +144,17 @@ a.active:hover {
     z-index: 1;
 }
 
-.dark .window-head-url {
-    border-color: #ffe1f2;
+
+
+.window-image {
+    width: 100%;
+    border: 3px solid #2661ca;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    box-sizing: border-box;
 }
+
+
 
 .window-buttons {
     margin: 5px;
@@ -267,6 +259,84 @@ a.active:hover {
 
 
 
+.dark {
+    color: white;
+    position: relative;
+}
+
+.dark .window {
+    border-color: #ffe1f2;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.222);
+}
+
+.dark .window:hover {
+    background-color: rgba(255, 255, 255, 0.395);
+    box-shadow: 0 10px 10px #A8B0EC86;
+}
+
+.dark .window-head {
+    border-color: #ffe1f2;
+    background-color: #539aea84;
+}
+
+.dark .window-head-url {
+    border-color: #ffe1f2;
+}
+
+.dark .window-image {
+    border-color: #ffe1f2;
+}
+
+.dark-start {
+    width: 100%;
+    height: 25vw;
+    min-height: 400px;
+    margin-bottom: -10px;
+    position: relative;
+}
+
+.dark-start > .dark-cloud-left {
+    position: absolute;
+    height: 25vw;
+    min-height: 300px;
+    left: 0px;
+    bottom:0px;
+}
+
+.dark-start > .dark-cloud-right {
+    position: absolute;
+    height: 25vw;
+    min-height: 300px;
+    right: 0px;
+    bottom:0px;
+}
+
+.dark-end {
+    width: 100%;
+    height: 10vw;
+    min-height: 200px;
+    margin-top: -9vw;
+    position: relative;
+}
+
+.dark-end > .dark-cloud-left {
+    position: absolute;
+    height: 10vw;
+    min-height: 100px;
+    left: 0px;
+    top:0px;
+}
+
+.dark-end > .dark-cloud-right {
+    position: absolute;
+    height: 10vw;
+    min-height: 100px;
+    right: 0px;
+    top:0px;
+}
+
+
 
 
 /* HEADER ******************************************************************************************************************************/
@@ -276,12 +346,15 @@ a.active:hover {
     display: block;
     position: relative;
     background-image: linear-gradient(to bottom, #ffe1f2a5, white); 
-    transition: 0.4s;
+    transition: 1s;
 }
 
 #header-small {
     height: 300px;
     display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, #ffe1f2a5, white); 
+    transition: 1s;
 }
 
 #header-window-wrapper {
@@ -301,33 +374,38 @@ a.active:hover {
 
 #header-clouds {
     width: 100%;
-    height: 700px;
+    height: inherit;
     position: absolute;
     transition: 0.4s;
 }
-
-@media screen and (max-width: 1000px) {
-    #header {
-        height: 50vw;
-    }
-
-    #header-clouds {
-        height: 50vw;
-    }
-}
+/* 
+#header-small > #header-clouds {
+    height: 350px;
+} */
 
 #header-clouds > .header-cloud-left {
     position: absolute;
-    height: inherit;
+    height: 700px;
     left: 0px;
     bottom:0px;
 }
 
 #header-clouds > .header-cloud-right {
     position: absolute;
-    height: inherit;
+    height: 700px;
     right: 0px;
     bottom:0px;
+}
+
+#header-small > #header-clouds > * {
+    height: 350px;
+    transition: 1s;
+}
+
+@media screen and (max-width: 1200px) {
+    #header {
+        height: 50vw;
+    }
 }
 
 #header-window {

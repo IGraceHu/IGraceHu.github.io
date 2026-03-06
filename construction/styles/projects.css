@@ -1,0 +1,155 @@
+.window-title {
+    max-width: 300px;
+    margin-left: -20px;
+}
+
+#rolf-intro-content {
+    padding: 100px 10vw 10vw 10vw;
+    box-sizing: border-box;
+    background-color: #2661ca;
+    background-image: radial-gradient(#5caed6 30%, #2661ca 70%);
+}
+
+#rolf-title-window {
+    position: relative;
+    max-width: fit-content;
+}
+
+#rolf-intro-desc {
+    display: block;
+    /* margin: 40px 0; */
+    columns: 2;
+}
+
+#rolf-intro-orig-container {
+    position: relative;
+}
+
+#rolf-intro-orig-desc {
+    position: absolute;
+    top: 130px;
+    width: 320px;
+    padding-bottom: 15px;
+    transition: 1s;
+    z-index: 1;
+}
+
+#rolf-intro-orig {
+    max-width: 80%;
+    margin-left: auto;
+    position: static;
+    z-index: 0;
+    transition: 1s;
+}
+
+@media screen and (max-width: 900px) {
+    #rolf-intro-orig {
+        max-width: 100%;
+    }
+
+    #rolf-intro-orig-desc {
+        position: relative;
+        top: 0;
+    }
+}
+
+
+
+
+
+
+
+#rolf-research {
+    padding: 100px 10vw 10vw 10vw;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#research-img {
+    position: absolute;
+    right: -300px;
+    top: 200px;
+    height: 300px;
+    opacity: 0.5;
+}
+
+#rolf-research > p {
+    max-width: 720px;
+    /* margin: 40px 0; */
+}
+
+#research-desc-window {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+#rolf-ideate {
+    padding: 100px 10vw 10vw 10vw;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+
+#rolf-ideate > p {
+    max-width: 720px;
+    /* margin: 40px 0; */
+}
+
+
+
+#rolf-design-content-glow {
+    padding: 100px 10vw 10px 10vw;
+    box-sizing: border-box;
+    background-color: #2661ca;
+    background-image: radial-gradient(#5caed6 30%, #2661ca 70%);
+}
+
+#rolf-design-content {
+    padding: 40px 10vw 10vw 10vw;
+    box-sizing: border-box;
+    background-color: #2661ca;
+}
+
+#rolf-design-window-buttons {
+    padding: 20px 0 15px 0;
+}
+
+#rolf-design button {
+    border-color: #ffe1f2;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.222);
+    font-size: 1.1rem;
+}
+
+#rolf-design button:hover {
+    background-color: rgba(255, 255, 255, 0.395);
+}
+
+#rolf-design button.active {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.395);
+}
+
+#rolf-design-window-window {
+    border: 3px solid #ffe1f2;
+    border-radius: 10px;
+    overflow-y: scroll;
+    height: 35vw;
+    margin-bottom: 1.2rem;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#rolf-design-window-window::-webkit-scrollbar {
+  display: none;
+}
+
+#rolf-design-window-image {
+    width: 100%;
+}

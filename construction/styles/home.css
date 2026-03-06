@@ -121,54 +121,6 @@
     }
 }
 
-#project-start {
-    width: 100%;
-    height: 25vw;
-    min-height: 400px;
-    margin-bottom: -10px;
-    position: relative;
-}
-
-#project-start > .project-cloud-left {
-    position: absolute;
-    height: 25vw;
-    min-height: 300px;
-    left: 0px;
-    bottom:0px;
-}
-
-#project-start > .project-cloud-right {
-    position: absolute;
-    height: 25vw;
-    min-height: 300px;
-    right: 0px;
-    bottom:0px;
-}
-
-#project-end {
-    width: 100%;
-    height: 10vw;
-    min-height: 200px;
-    margin-top: -9vw;
-    position: relative;
-}
-
-#project-end > .project-cloud-left {
-    position: absolute;
-    height: 10vw;
-    min-height: 100px;
-    left: 0px;
-    top:0px;
-}
-
-#project-end > .project-cloud-right {
-    position: absolute;
-    height: 10vw;
-    min-height: 100px;
-    right: 0px;
-    top:0px;
-}
-
 
 
 
