@@ -1,0 +1,19 @@
+#illustrations-container {
+    width: 100%;
+    padding: 10vw;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    #illustrations-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+#illustrations-container img {
+    width: 100%;
+    margin-bottom: 10px;
+}
