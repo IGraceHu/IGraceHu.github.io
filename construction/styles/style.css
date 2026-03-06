@@ -72,6 +72,15 @@ a:hover {
     color: #A8B0EC !important;
 }
 
+a.active {
+    color: #539aea;
+}
+
+a.active:hover {
+    color: #539aea;
+    cursor: default;
+}
+
 .button {
     padding: 10px;
     border: 3px solid #2661ca;
@@ -270,6 +279,11 @@ a:hover {
     transition: 0.4s;
 }
 
+#header-small {
+    height: 300px;
+    display: block;
+}
+
 #header-window-wrapper {
     /* width: 100%; */
     height: 100%;
@@ -316,6 +330,9 @@ a:hover {
     bottom:0px;
 }
 
+#header-window {
+    min-width: 300px;
+}
 
 nav {
     /* width: 100%; */
@@ -355,194 +372,6 @@ nav > img {
 nav a {
     margin: 0 2vw;
 }
-
-
-/* ABOUT ******************************************************************************************************************************/
-
-#about {
-    padding: 50px;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-
-}
-
-#about-portrait {
-    width: 70vw;
-    max-width: 500px;
-    padding-left: 40px;
-    display: block;
-    margin: auto;
-}
-
-#about-content-container {
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    top:0;
-    left: 0;
-    display: grid;
-    grid-template-columns: auto 16vw auto;
-}
-
-@media screen and (max-width: 800px) {
-   #about-content-container {
-        grid-template-columns: auto 0 auto;
-        margin: 0 10px;
-    }
-}
-
-#about-content-container > div {
-    position: relative;
-}
-
-#about-window-1 {
-    width: 330px;
-    position: absolute;
-    top: 120px;
-    right:0;
-    /* transition: 0.2s; */
-}
-
-#about-window-2 {
-    width: 270px;
-    position: absolute;
-    top: 350px;
-    left: 40px;
-    /* transition: 0.2s; */
-}
-
-#about-window-3 {
-    width: 250px;
-    position: absolute;
-    
-    top: 540px;
-    right: -20px;
-    /* transition: 0.2s; */
-}
-
-@media screen and (max-width: 800px) {
-    #about-window-1 {
-        left: 50px;
-    }
-
-    #about-window-2 {
-        right: 50px;
-        left: auto;
-    }
-
-    #about-window-3 {
-        left: 100px;
-    }
-}
-
-
-/* PROJECT ******************************************************************************************************************************/
-
-#project-body {
-    padding: 100px 10vw 15vw 10vw;
-    box-sizing: border-box;
-    background-color: #2661ca;
-    background-image: radial-gradient(#5caed6 30%, #2661ca 70%);
-}
-
-#project-title-window {
-    width: 250px;
-}
-
-#project-rolf-window {
-    margin-left: calc(3vw + 10px);
-    margin-top: -190px;
-}
-
-#project-rolf-window > div {
-    width: 480px;
-}
-
-#project-rolf-image-window {
-    margin-left: auto;
-    margin-top: -40px;
-    width: 100%;
-    max-width: 900px;
-}
-
-#rolf-image {
-    width: 100%;
-    border: 3px solid #ffe1f2;
-    border-radius: 10px;
-    margin-bottom: 1.2rem;
-    box-sizing: border-box;
-}
-
-@media screen and (max-width: 1200px) {
-    #project-rolf-image-window {
-        margin-top: 10px;
-    }
-}
-
-#project-start {
-    width: 100%;
-    height: 25vw;
-    min-height: 400px;
-    margin-bottom: -10px;
-    position: relative;
-}
-
-#project-start > .project-cloud-left {
-    position: absolute;
-    height: 25vw;
-    min-height: 300px;
-    left: 0px;
-    bottom:0px;
-}
-
-#project-start > .project-cloud-right {
-    position: absolute;
-    height: 25vw;
-    min-height: 300px;
-    right: 0px;
-    bottom:0px;
-}
-
-#project-end {
-    width: 100%;
-    height: 10vw;
-    min-height: 200px;
-    margin-top: -9vw;
-    position: relative;
-}
-
-#project-end > .project-cloud-left {
-    position: absolute;
-    height: 10vw;
-    min-height: 100px;
-    left: 0px;
-    top:0px;
-}
-
-#project-end > .project-cloud-right {
-    position: absolute;
-    height: 10vw;
-    min-height: 100px;
-    right: 0px;
-    top:0px;
-}
-
-
-
-
-/* ILLUSTRATION ******************************************************************************************************************************/
-
-#illustration {
-    padding: 100px 10vw 15vw 10vw;
-}
-
-#illustration-title-window {
-    width: 250px;
-}
-
-
-
 
 
 /* FOOTER ******************************************************************************************************************************/
