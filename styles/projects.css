@@ -159,17 +159,20 @@
     background-image: radial-gradient(#5caed6 30%, #2661ca 70%);
 }
 
-#rolf-design-content {
+#rolf-design-content-bottom {
     padding: 40px 10vw 10vw 10vw;
     box-sizing: border-box;
     background-color: #2661ca;
 }
 
 #rolf-design-window-buttons {
-    padding: 20px 0 15px 0;
+    padding: 0 0 15px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #rolf-design button {
+    margin: 5px;
     border-color: #ffe1f2;
     color: white;
     background-color: rgba(255, 255, 255, 0.222);

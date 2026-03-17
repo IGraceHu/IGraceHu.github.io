@@ -96,7 +96,7 @@ button:hover, .button:hover {
 }
 
 .window {
-    padding: 30px 20px 0px 20px;
+    padding: 0;
     border: 3px solid #2661ca;
     border-radius: 10px;
     position: relative;
@@ -118,29 +118,37 @@ button:hover, .button:hover {
     width: min-content;
 }
 
+.window-body {
+   padding: 10px 20px;
+}
+
+.window-body > *:first-child {
+    margin-top: 0;
+}
+
 .window-head {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -5px;
     left: 0;
     background-color: #539aea60;
     width: 100%;
-    height: 2rem;
+    /* height: 2rem; */
     border-bottom: 3px solid #2661ca;
     border-radius: 7px 7px 0 0;
+    box-sizing: border-box;
 }
 
 .window-url .window-head {
-    height: 4.75rem;
+    padding-bottom: 10px;
     z-index: 0;
 }
 
 .window-head-url {
     position: relative;
-    margin: 2px -8px;
+    margin: 2px 20px;
     padding: 5px;
     border: 3px solid #2661ca;
     border-radius: 10px;
-    margin-bottom: 2rem;
     background-color: #ffffff58;
     z-index: 1;
 }
@@ -151,7 +159,6 @@ button:hover, .button:hover {
     width: 100%;
     border: 3px solid #2661ca;
     border-radius: 10px;
-    margin-bottom: 1.2rem;
     box-sizing: border-box;
 }
 
@@ -159,7 +166,7 @@ button:hover, .button:hover {
 
 .window-buttons {
     margin: 5px;
-    padding: 0 4px;
+    padding-top: 4px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -554,6 +561,9 @@ nav a {
 
 #footer-buttons > .button {
     background-color: #fff3fa;
+    display: flex;
+    align-items: center;
+
 }
 
 #footer-buttons > .button:nth-child(3) {
@@ -567,12 +577,20 @@ nav a {
 .button.out {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-right: 10px;
 }
 
 #footer-buttons svg {
     height: 1rem;
+}
+
+#footer-buttons img {
+    height: 1.5rem;
+    margin: 0 10px 0 -10px;
+}
+
+#footer-buttons img.phone {
+    padding: 0 5px;
 }
 
 .arrow-out {
@@ -581,6 +599,30 @@ nav a {
     stroke-linecap: round;
     stroke-miterlimit: 10;
     stroke-width: 4px;     
+}
+
+#footer-links a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.arrow-right {
+    height: 1rem;
+    fill: none;
+    stroke: #539aea;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    bottom: 0;
+    position: relative;
+    margin-left: 5px;
+    transition: 0.2s;
+
+}
+
+a:hover .arrow-right {
+    stroke: #a8b0ec;
+    margin-left: 10px;
 }
 
 .button:hover svg > * {
@@ -596,7 +638,7 @@ nav a {
     height: 400px;
     box-sizing: border-box;
     position: relative;
-    background-image: linear-gradient(to bottom, white, #ffe1f2, #ffe1f2, #539aea, #4582e6); 
+    background-image: linear-gradient(to bottom, white, #ffe1f2, #a8b0ec, #a8b0ec, #539aea, #4582e6); 
 }
 
 #footer-image > img {
@@ -635,8 +677,8 @@ nav a {
 }
 
 .footer-light-clouds:nth-child(1) {
-    top: 0;
-    left: 200px;
+    top: 20px;
+    left: 180px;
     height: 100px;
 }
 

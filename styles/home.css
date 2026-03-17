@@ -106,6 +106,11 @@
     width: 100%;
 }
 
+#about-bg img {
+    position: absolute;
+    width: 220px;
+}
+
 #about-bg .cloud-1 {
     position: absolute;
     width: 360px;
@@ -127,6 +132,38 @@
     top: 100px;
 }
 
+#about-bg .cloud-light-1 {
+    left: 100px;
+    top: 70px;
+}
+
+#about-bg .cloud-light-2 {
+    right: -50px;
+    top: 100px;
+}
+
+#about-bg .cloud-light-3 {
+    right: 600px;
+    top: 170px;
+    width: 190px;
+}
+
+#about-bg .cloud-light-4 {
+    left: 500px;
+    top: 400px;
+}
+
+#about-bg .cloud-light-5 {
+    right: 400px;
+    top: 650px;
+}
+
+#about-bg .cloud-light-6 {
+    left: 100px;
+    top: 720px;
+}
+
+
 
 /* PROJECT ******************************************************************************************************************************/
 
@@ -141,22 +178,6 @@
     width: 250px;
 }
 
-#project-rolf-window {
-    margin-left: calc(3vw + 10px);
-    margin-top: -190px;
-}
-
-#project-rolf-window > div {
-    width: 480px;
-}
-
-#project-rolf-image-window {
-    margin-left: auto;
-    margin-top: -40px;
-    width: 100%;
-    max-width: 900px;
-}
-
 #rolf-image {
     width: 100%;
     border: 3px solid #ffe1f2;
@@ -165,13 +186,74 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 1200px) {
+#project-rolf-container {
+    position: relative;
+    min-height: 600px;
+}
+
+#project-rolf-window {
+    position: absolute;
+    top: 330px;
+    width: 500px;
+    padding-bottom: 15px;
+    transition: 1s;
+    z-index: 1;
+}
+
+#project-rolf-image-window {
+    display: block;
+    max-width: 70%;
+    margin-top: 10px;
+    margin-left: auto;
+    position: static;
+    z-index: 0;
+    transition: 1s;
+}
+
+@media screen and (max-width: 900px) {
     #project-rolf-image-window {
-        margin-top: 10px;
+        max-width: 100%;
+    }
+
+    #project-rolf-window {
+        position: relative;
+        top: 0;
     }
 }
 
+#project-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0
+}
 
+#project-bg-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#project-bg .cloud-dark-1 {
+    position: absolute;
+    width: 360px;
+    left: 30px;
+    top: 700px;
+}
+
+#project-bg .cloud-dark-2 {
+    position: absolute;
+    width: 360px;
+    right: 30px;
+    top: 800px;
+}
+
+#project-bg .cloud-dark-3 {
+    position: absolute;
+    width: 360px;
+    left: 120px;
+    top: 1130px;
+}
 
 
 /* ILLUSTRATION ******************************************************************************************************************************/
