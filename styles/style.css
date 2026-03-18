@@ -566,6 +566,10 @@ nav a {
 
 }
 
+#footer-buttons > .button:hover {
+    cursor: default;
+}
+
 #footer-buttons > .button:nth-child(3) {
     background-color: #e3e5f9;
 }
@@ -576,12 +580,17 @@ nav a {
 
 .button.out {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding-right: 10px;
+}
+
+#footer-buttons > .button.out:hover {
+    cursor: pointer;
 }
 
 #footer-buttons svg {
     height: 1rem;
+    margin-left: auto;
 }
 
 #footer-buttons img {
@@ -598,7 +607,8 @@ nav a {
     stroke: #2661ca;
     stroke-linecap: round;
     stroke-miterlimit: 10;
-    stroke-width: 4px;     
+    stroke-width: 4px;  
+    transition: 0.2s;
 }
 
 #footer-links a {
@@ -617,7 +627,6 @@ nav a {
     position: relative;
     margin-left: 5px;
     transition: 0.2s;
-
 }
 
 a:hover .arrow-right {

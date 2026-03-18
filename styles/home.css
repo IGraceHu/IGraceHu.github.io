@@ -193,7 +193,8 @@
 
 #project-rolf-window {
     position: absolute;
-    top: 330px;
+    top: 300px;
+    left: 10px;
     width: 500px;
     padding-bottom: 15px;
     transition: 1s;
@@ -202,7 +203,7 @@
 
 #project-rolf-image-window {
     display: block;
-    max-width: 70%;
+    max-width: 1000px;
     margin-top: 10px;
     margin-left: auto;
     position: static;
@@ -210,7 +211,7 @@
     transition: 1s;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     #project-rolf-image-window {
         max-width: 100%;
     }
@@ -255,6 +256,38 @@
     top: 1130px;
 }
 
+#project-bg .star {
+    width: 50px;
+    position: absolute;
+}
+
+#project-bg .star-1 {
+    right: 100px;
+    top: 400px;
+}
+
+#project-bg .star-2 {
+    right: 500px;
+    top: 500px;
+}
+
+#project-bg .star-3 {
+    left: 300px;
+    top: 900px;
+}
+
+#project-bg .star-4 {
+    left: 500px;
+    top: 1400px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    #project-bg .star-4 {
+        display: hidden;
+    }
+}
+
 
 /* ILLUSTRATION ******************************************************************************************************************************/
 
@@ -265,14 +298,14 @@
 }
 
 #illustration-title-window {
-    width: 250px;
+    width: 300px;
     position: relative;
     z-index: 1;
 }
 
 #illustration-images {
     position: absolute;
-    top: 100px;
+    top: 150px;
     left: -5%;
     width: 110%;
     display: grid;
