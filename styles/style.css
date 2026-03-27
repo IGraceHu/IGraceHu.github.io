@@ -19,6 +19,10 @@ body {
     color: #2661ca;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 .text-lightblue {
     color: #539aea;
 }
