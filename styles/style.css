@@ -275,11 +275,11 @@ button:hover, .button:hover {
 .dark .window {
     border-color: #ffe1f2;
     color: white;
-    background-color: rgba(255, 255, 255, 0.222);
+    background-color: rgba(66, 104, 180, 0.212);
 }
 
 .dark .window:hover {
-    background-color: rgba(255, 255, 255, 0.395);
+    background-color: rgba(66, 104, 180, 0.395);
     box-shadow: 0 10px 10px #A8B0EC86;
 }
 
