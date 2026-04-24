@@ -36,7 +36,6 @@ body.fade-in {
     animation-name: fade-in;
 }
 
-
 body.fade-out {
     opacity: 0;
     animation-name: fade-out;
