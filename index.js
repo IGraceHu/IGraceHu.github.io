@@ -47,5 +47,42 @@ window.onload = function () {
         windowEl.prepend(windowHeadEl);
         windowEl.append(windowBodyEl);
     });
+
+    const bodyEl = document.getElementsByTagName("body")[0];
+    bodyEl.classList.add("fade-in");
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    let anchors = document.getElementsByTagName("a");
+    
+    for (let i = 0; i < anchors.length; i += 1) {
+        if (anchors[i].hostname !== window.location.hostname ||
+            anchors[i].pathname === window.location.pathname) {
+            continue;
+        }
+        anchors[i].addEventListener("click", function(event) {
+            const bodyEl = document.getElementsByTagName("body")[0],
+                anchor = event.currentTarget;
+            
+            var listener = function() {
+                window.location = anchor.href;
+                bodyEl.removeEventListener("animationend", listener);
+            };
+            // Listen for when fade animatino ends, then navigate to href
+            bodyEl.addEventListener("animationend", listener);
+            
+            event.preventDefault();
+            bodyEl.classList.add("fade-out");
+        });
+    }
+});
+
+window.addEventListener('pageshow', function (event) {
+    if (!event.persisted) {
+        return;
+    }
+
+    const bodyEl = document.getElementsByTagName("body")[0];
+    bodyEl.classList.remove('fade-in');
+});
