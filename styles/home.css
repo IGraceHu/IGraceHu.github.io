@@ -193,7 +193,7 @@
 
 #project-rolf-window {
     position: absolute;
-    top: 300px;
+    top: 120px;
     left: 10px;
     width: 500px;
     padding-bottom: 15px;
@@ -203,7 +203,7 @@
 
 #project-rolf-image-window {
     display: block;
-    max-width: 1000px;
+    max-width: 900px;
     margin-top: 10px;
     margin-left: auto;
     position: static;
