@@ -176,7 +176,6 @@ function currentDepthCount() {
             i++;
         }
     }
-    i = i == 0 ? 1 : i;
     return ".".repeat(i);
 }
 

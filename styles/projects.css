@@ -1,7 +1,93 @@
+#projects-container {
+    padding: 100px 10vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;;
+    gap: 40px;
+}
+
+.project-window {
+    /* max-width: 500px; */
+    display: block;
+}
+
 .window-title {
     max-width: 300px;
     margin-left: -20px;
 }
+
+.project-window .window-body {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+.project-window-logo {
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    margin: 10px;
+    opacity: 0.5;
+    max-width: 400px;
+    z-index: -1;
+
+}
+
+@media screen and (max-width: 1100px) {
+    #projects-container {
+        grid-template-columns: auto;
+    }
+}
+
+#iajes-project-window .window, #iajes-project-window .window-head {
+    color: #136E8D;
+    border-color: #136E8D;
+}
+
+#iajes-project-window .window-head {
+    background-color: #1EA49360;
+}
+
+#iajes-project-window:hover h2 {
+    color: #1EA493;
+}
+
+#iajes-project-window .window-buttons > div {
+    background-color: #1EA493;
+}
+
+#iajes-project-window .window-buttons > div:hover {
+    background-color: #136E8D;
+}
+
+
+
+#rolf-project-window .window, #rolf-project-window .window-head {
+    color: #1F8AA0;
+    border-color: #1F8AA0;
+    transition: color 0.2s, margin 0.6s, box-shadow 0.6s, background-color 0.6s;
+}
+
+#rolf-project-window:hover h2 {
+    color: #49B5BB;
+}
+
+#rolf-project-window .window-head {
+    background-color: #49B5BB60;
+}
+
+#rolf-project-window .window-buttons > div {
+    background-color: #49B5BB;
+}
+
+#rolf-project-window .window-buttons > div:hover {
+    background-color: #1F8AA0;
+}
+
+
+
+
 
 #rolf-intro-content {
     padding: 100px 10vw 10vw 10vw;
@@ -149,8 +235,7 @@
         opacity: 1;
     }
 }
-
-
+    
 
 #rolf-design-content-glow {
     padding: 100px 10vw 10px 10vw;
