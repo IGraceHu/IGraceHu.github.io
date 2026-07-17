@@ -3,8 +3,13 @@
     <head>
         <title>Isabelle Hu - IAJES Website Revamp</title>
         <script src="../jquery-4.0.0.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="../styles/style.css" />
         <link rel="stylesheet" href="../styles/projects.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <script src="../index.js" async></script>
     </head>
     <body>
@@ -17,8 +22,93 @@
         <nav id="nav-container">
         </nav>
 
-        <main>
-            
+        <main id="iajes-main-container">
+            <div id="iajes-intro">
+                <p>
+                    For my Senior Design Project at Santa Clara University, my team volunteered to revamp and improve the website of the <span class="highlight">International Association of Jesuit Engineering and Sciences (IAJES)</span> schools.
+                </p>
+                <p>
+                    <strong>Role</strong>: Lead UI Designer and Full-stack Developer
+                    <br/>
+                    <strong>Tools</strong>: React, Tailwind CSS, Supabase, Figma, Adobe Illustrator
+                    <br/>
+                    <strong>Team</strong>: Nicolas Gibson (UI Designer and Full-stack Developer), Anisha Malani (Front-end Developer), Justin Fan (Back-end Developer)
+                </p>
+            </div>
+
+            <div id="iajes-need">
+            <div id="iajes-need-window" class="window">
+                <p>
+                    IAJES saw a need for an online platform where IAJES could share their resources and support their international academic community in collaboration and connection.
+                </p>
+            </div>
+            </div>
+
+            <section id="iajes-features" class="text-col-small">
+                <p>To address this need, we endeavored to create four main features in the new website:</p>
+                <div id="iajes-features-row">
+                    <div>
+                        <i class="bi bi-people-fill"></i>
+                        Member Accounts
+                    </div>
+                    <div>
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        Modular Resources
+                    </div>
+                    <div>
+                        <i class="bi bi-database-fill"></i>
+                        Database Storage
+                    </div>
+                    <div class="blue">
+                        <i class="bi bi-newspaper"></i>
+                        Emailed Newsletter
+                    </div>
+                </div>
+                <p>Over the course of the project, I designed simple yet elegant assets and components for the team to use throughout the development process. Every layout, component, and interaction were designed with IAJES's mission and initial aesthetic in mind, and I brought my detail-oriented development and diligent work ethic to other areas of the project when needed.</p>
+            </section>
+
+            <section id="iajes-ui">
+                <div class="window window-title">
+                    <h2>Branding and UI Development</h2>
+                </div>
+                <div id="iajes-ui-1" class="text-col-small">
+                    <div>
+                        <img width="400" src="../assets/iajes/logo-iajes.svg" />
+                    </div>
+                    <div>
+                        <p>
+                            IAJES only had one inspiration behind their goal of creating branding and identity: their logo.
+                            <br /><br />
+                            Even though this logo was my only source of inspiration, I quickly saw multiple motifs that I could draw upon to create other assets and establish the style of the site:
+                        </p>
+                        <div id="iajes-motifs-column">
+                            <img src="../assets/iajes/motif-1.svg" />
+                            <img src="../assets/iajes/motif-2.svg" />
+                            <img src="../assets/iajes/motif-3.svg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="iajes-ui-2" class="text-col-small">
+                    <p>Next, I chose the site's fonts and color palette. I chose <span class="quicksand highlight">Quicksand</span> as IAJES's heading font and <span class="oxygen highlight">Oxygen</span> as the body font. Quicksand was chosen due to the rounded sans serif's similarity to IAJES's logo. For colors, I found that IAJES's logo already featured a good spread of colors to achieve a classy and elegant look, so I just added extra lighter and darker colors to the edge of the palette.</p>
+                    <div id="iajes-styles-column">
+                        <div>
+                            <span class="quicksand">Quicksand</span><span class="oxygen"> | Oxygen</span>
+                        </div>
+                        <div class="swatch swatch-74C9B5">#74C9B5</div>
+                        <div class="swatch swatch-1EA493">#1EA493</div>
+                        <div class="swatch swatch-136E8D">#136E8D</div>
+                        <div class="swatch swatch-063751">#063751</div>
+                    </div>
+                </div>
+
+                <div id="iajes-ui-3">
+                    <p>With these guiding aesthetics, I created a styleguide for the site.</p>
+                </div>
+            </section> 
+
+
+
         </main>
 
         <div id="footer-container">
