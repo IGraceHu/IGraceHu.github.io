@@ -261,6 +261,23 @@
     background-color: #063751;
 }
 
+#iajes-styleguide-window {
+    max-height: 75vh;
+    height: 800px;
+    overflow: hidden;
+}
+
+#iajes-styleguide-window > .window-body {
+    padding: 0;
+}
+
+
+#iajes-styleguide {
+    width: 100%;
+    max-height: calc(75vh - 35px);
+    height: 765px;
+}
+
 
 
 
