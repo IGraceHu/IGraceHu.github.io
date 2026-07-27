@@ -107,7 +107,7 @@
 }
 
 #iajes-main-container {
-    padding: 100px 10vw 10vw 10vw;
+    padding: 100px 0 10vw 0;
 }
 
 #iajes-main-container > section {
@@ -118,6 +118,7 @@
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px;
+    margin: auto 10vw;
 }
 
 @media screen and (max-width: 1100px) {
@@ -145,6 +146,10 @@
     font-weight: bold;
     font-size: 1.1rem;
     line-height: 1.9rem;
+}
+
+#iajes-features {
+    margin: auto 10vw;
 }
 
 #iajes-features-row {
@@ -186,12 +191,18 @@
     }
 }
 
+#iajes-ui > * {
+    margin: auto 10vw;
+}
+
 #iajes-ui-1 {
-    margin: 40px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: auto auto;
     gap: 50px;
     align-items: center;
+    
 }
 
 #iajes-ui-1 > * {
@@ -212,10 +223,11 @@
 }
 
 #iajes-ui-2 {
-    margin: 40px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 50px;
+    column-gap: 50px;
     align-items: center;
 }
 
@@ -271,11 +283,19 @@
     padding: 0;
 }
 
-
 #iajes-styleguide {
     width: 100%;
     max-height: calc(75vh - 35px);
     height: 765px;
+}
+
+#iajes-ui-4 {
+    margin: 0;
+    margin-top: -140px;
+}
+
+#iajes-ui-4 > .dark-body {
+    padding: 50px 10vw 15vw 10vw;
 }
 
 

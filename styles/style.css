@@ -60,6 +60,11 @@ main {
     background-color: #ffe1f2;
 }
 
+.dark .highlight {
+    color: white;
+    background-color: #539aea81;
+}
+
 .lighter-text {
     opacity: .7;
 }
@@ -319,6 +324,13 @@ button:hover, .button:hover {
 .dark {
     color: white;
     position: relative;
+}
+
+.dark-body {
+    background-color: #2661ca;
+    /* background-image: radial-gradient(#5caed6 30%, #2661ca 70%); */
+    /* box-sizing: border-box; */
+
 }
 
 .dark .window {

@@ -103,15 +103,72 @@
                 </div>
 
                 <div id="iajes-ui-3">
-                    <p>With these guiding aesthetics, I created a styleguide for the site.</p>
+                    <p>With these guiding aesthetics, I created a styleguide for the site with an emphasis on lines and gradients. Not only does the styleguide describe preset styles for significant HTML elements, I also added examples of custom components I created as assets for more visual interest.</p>
                     <br/>
                     <div id="iajes-styleguide-window" class="window">
                         <div style="z-index:1000;position:absolute; height:120px; width:100%; opacity:0; top:0;left:0;"></div>
                          <iframe id="iajes-styleguide" src="https://iajes-website--iajes-site.us-east4.hosted.app/styleguide" title="IAJES Styleguide"></iframe> 
                     </div>
+                </div>
 
-                    <script>
-                    </script>
+                <div id="iajes-ui-4" class="dark">
+                    <div class="dark-start">
+                        <img class="dark-cloud-left" src="../assets/project-start-cloud-left.svg" />
+                        <img class="dark-cloud-right" src="../assets/project-start-cloud-right.svg" />
+                    </div>
+
+                    <div class="dark-body">
+                        <h2 style="text-align: center;">User Experience</h2>
+                        <p>
+                            User experience is always a top priority of mine in design, especially since IAJES has such an established elegant aesthetic. I designed IAJES's styleguide with a seameless user and developer experience in mind. For the Popup and Multi-Select components, not only is user interactivity is the focal point, but developer implementation is also a concern because both components will be widely used across development. 
+                            <br/><br/>
+                            Thus, the number one priority of these components is that the component would be <span class="highlight">functional</span>, of course, and the number two priority is that the component would be <span class="highlight">enjoyable and easy to use</span>.
+                        </p>
+                        <br/><br/>
+
+                        <div id="iajes-ui-popups-window" class="window">
+                            <h3>Popups</h3>
+                            <p>
+                                Popups are a completely seperate element from the rest of the site, temporarily shifting user interactivity to a new location, which means that:
+                                <ol>
+                                    <li>The shift to and from the popup should smooth and seamless, easing the user to this new location and back.</li>
+                                    <li>The site elements that are now in the background should not draw the user's attention and should remain unchanged as long as the user is within the popup.</li>
+                                </ol>
+                            </p>
+                            <p style="column-count: 2;">
+                                For the first point, popups start out absent and un-rendered from the page. To open a popup, the popup must be first rendered, then animated in a smooth fade-in and maybe even a slide-in animation. To close a popup, the popup must be first animated, then un-rendered. Code executes very quickly, so it is not just a simple manner of rendering then animating. <span class="highlight">A timing function must come into play to ensure the transition is seamless</span>.
+                                <br/><br/><br/>
+                                As for the second point, the only gripe is with how browsers function. To disable background scrolling, the page's overflow must be disabled. However, elements with a disabled overflow lose their scrollbar, changing the width of the site viewport. This change of width is extremely noticable and irritating especially when there are many popups on the site. <span class="highlight">The disappearing scrollbar must be accounted for to ensure the transition is smooth</span>.
+                            </p>
+                        </div>
+
+                        <div id="iajes-ui-multiselect-window" class="window">
+                            <h3>Multi-Select</h3>
+                            <p>
+                                A multi-select allows a user to pick multiple options from a list. Unfortunately, the default HTML multi-select element is quite unintuitive and difficult for some users to utilize. A user would have to drag their cursor across their desired options, or hold CTRL to keep their desired options when picking other options.
+                                <br/>
+                                The expected behavior of a multi-select would be:
+                                <ol>
+                                    <li>Clicking on an option selects the option, and clicking on a selected option deselects the option.</li>
+                                    <li>Clicking on an option does not affect other options that have already been selected.</li>
+                                </ol>
+                                By using the multi-select as a controlled input with React and building a custom function to update the selected options when the user interacts with it, I built a multi-select input that fulfills both of those needs.
+                                
+                                Mobile devices and other touchscreen devices counteract this issue by using a extraneous and more accessible selection interface instead.
+                                <br/>
+                                However, the mobile workaround results in multi-select having different behaviors on desktop and mobile. The desktop view would need a modified version of the default multi-select element to ensure a smoother and more accessible user experience, while the mobile view has no need of any modifications. Additionally, for the ease of development, it would be best for 
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                    
+
+                    <div class="dark-end">
+                        <img class="dark-cloud-left" src="../assets/project-end-cloud-left.svg" />
+                        <img class="dark-cloud-right" src="../assets/project-end-cloud-right.svg" />
+                    </div>
                 </div>
             </section> 
 
