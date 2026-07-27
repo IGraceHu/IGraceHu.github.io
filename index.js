@@ -9,9 +9,8 @@
     populateNav($("#nav-container"));
     populateFooter($("#footer-container"));
 
-    const windowEls = Array.from(document.getElementsByClassName("window"));
-    windowEls.forEach((windowEl) => {
-        createWindow(windowEl)
+    $(".window").each((i, windowEl) => {
+        createWindow($(windowEl));
     });
 
     $("body").addClass("fade-in");
@@ -19,50 +18,27 @@
 
 function createWindow(windowElement) {
     if (windowElement) {
-        const windowHeadEl = document.createElement("div");
-        windowHeadEl.classList.add("window-head");
 
-        const windowButtonsEl = document.createElement("div");
-        windowButtonsEl.classList.add("window-buttons");
+        const windowHeadEl = $(`<div class="window-head">
+                <div class="window-buttons">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>`);
 
-        const windowButton1El = document.createElement("div");
-        const windowButton2El = document.createElement("div");
-        const windowButton3El = document.createElement("div");
-        windowButtonsEl.appendChild(windowButton1El);
-        windowButtonsEl.appendChild(windowButton2El);
-        windowButtonsEl.appendChild(windowButton3El);
-
-        windowHeadEl.appendChild(windowButtonsEl);
-
-        if (windowElement.classList.contains("window-url")) {
-            let windowUrlEl;
-            for (let child of windowElement.children) {
-                if (child.classList.contains("window-head-url")) {
-                    windowUrlEl = child;
-                    break;
-                }
-            }
-
+        if (windowElement.children(".window-url")) {
+            const windowUrlEl = windowElement.find(".window-head-url");
             if (windowUrlEl != null) {
-                windowHeadEl.appendChild(windowUrlEl);
+                windowHeadEl.append(windowUrlEl);
             }
         }
 
-        const windowBodyEl = document.createElement("div");
-        windowBodyEl.classList.add("window-body");
-        const childList = [];
-        for (let child of windowElement.children) {
-            if (!child.classList.contains("window-head-url")) {
-                childList.push(child);
-            }
-        }
+        const windowBodyEl = $('<div class="window-body"></div>');
+        const childList = windowElement.children().not(".window-head");
+        windowBodyEl.append(childList);
 
-        for (let child of childList) {
-            windowBodyEl.appendChild(child);
-        }
-
-        windowElement.prepend(windowHeadEl);
-        windowElement.append(windowBodyEl);
+        windowElement.append(windowHeadEl, windowBodyEl);
     }
 }
 

@@ -148,10 +148,12 @@
                                 A multi-select allows a user to pick multiple options from a list. Unfortunately, the default HTML multi-select element is quite unintuitive and difficult for some users to utilize. A user would have to drag their cursor across their desired options, or hold CTRL to keep their desired options when picking other options.
                                 <br/>
                                 The expected behavior of a multi-select would be:
-                                <ol>
-                                    <li>Clicking on an option selects the option, and clicking on a selected option deselects the option.</li>
-                                    <li>Clicking on an option does not affect other options that have already been selected.</li>
-                                </ol>
+                            </p>
+                            <ol>
+                                <li>Clicking on an option selects the option, and clicking on a selected option deselects the option.</li>
+                                <li>Clicking on an option does not affect other options that have already been selected.</li>
+                            </ol>
+                            <p>
                                 By using the multi-select as a controlled input with React and building a custom function to update the selected options when the user interacts with it, I built a multi-select input that fulfills both of those needs.
                                 
                                 Mobile devices and other touchscreen devices counteract this issue by using a extraneous and more accessible selection interface instead.
