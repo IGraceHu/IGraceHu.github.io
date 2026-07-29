@@ -62,7 +62,7 @@
 }
 
 #about-window-2 {
-    width: 270px;
+    width: 300px;
     position: absolute;
     top: 350px;
     left: 40px;
@@ -178,48 +178,37 @@
     width: 250px;
 }
 
-#rolf-image {
-    width: 100%;
-    border: 3px solid #ffe1f2;
-    border-radius: 10px;
-    margin-bottom: 1.2rem;
-    box-sizing: border-box;
+#projects-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;;
+    gap: 40px;
 }
 
-#project-rolf-container {
+@media screen and (max-width: 1100px) {
+    #projects-container {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+}
+
+.project-window .window-body {
     position: relative;
-    min-height: 600px;
+    overflow: hidden;
+    min-height: 200px;
 }
 
-#project-rolf-window {
+.project-window-logo {
+    float: right;
     position: absolute;
-    top: 120px;
-    left: 10px;
-    width: 500px;
-    padding-bottom: 15px;
-    transition: 1s;
-    z-index: 1;
-}
+    bottom: 0;
+    right: -50px;
+    margin: 10px;
+    filter: brightness(200%);
+    opacity: 0.9;
+    max-width: 400px;
+    z-index: -1;
 
-#project-rolf-image-window {
-    display: block;
-    max-width: 900px;
-    margin-top: 10px;
-    margin-left: auto;
-    position: static;
-    z-index: 0;
-    transition: 1s;
-}
-
-@media screen and (max-width: 1200px) {
-    #project-rolf-image-window {
-        max-width: 100%;
-    }
-
-    #project-rolf-window {
-        position: relative;
-        top: 0;
-    }
 }
 
 #project-bg {
@@ -227,7 +216,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 0
+    z-index: 0;
 }
 
 #project-bg-wrapper {
@@ -239,7 +228,7 @@
     position: absolute;
     width: 360px;
     left: 30px;
-    top: 700px;
+    top: 600px;
 }
 
 #project-bg .cloud-dark-2 {
@@ -253,7 +242,7 @@
     position: absolute;
     width: 360px;
     left: 120px;
-    top: 1130px;
+    top: 970px;
 }
 
 #project-bg .star {
@@ -278,7 +267,7 @@
 
 #project-bg .star-4 {
     left: 500px;
-    top: 1400px;
+    top: 1100px;
 }
 
 
