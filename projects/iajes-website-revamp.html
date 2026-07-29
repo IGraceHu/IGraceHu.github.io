@@ -36,12 +36,18 @@
                 </p>
             </div>
 
-            <div id="iajes-need">
-            <div id="iajes-need-window" class="window">
+            <div id="iajes-summary" class="text-col-small">
                 <p>
-                    IAJES saw a need for an online platform where IAJES could share their resources and support their international academic community in collaboration and connection.
+                    In this project, I designed the website branding and styleguide, as well as many of the page layouts across the website. I developed accessible and flexible components created to be simple to use across development by any team member. Within the technical aspects of site development, I spearheaded the phase of database development and interaction with the web interface.
                 </p>
             </div>
+
+            <div id="iajes-need">
+                <div id="iajes-need-window" class="window">
+                    <p>
+                        IAJES saw a need for an online platform where IAJES could share their resources and support their international academic community in collaboration and connection.
+                    </p>
+                </div>
             </div>
 
             <section id="iajes-features" class="text-col-small">
@@ -120,7 +126,7 @@
                     <div class="dark-body">
                         <h2 style="text-align: center;">User Experience</h2>
                         <p>
-                            User experience is always a top priority of mine in design, especially since IAJES has such an established elegant aesthetic. I designed IAJES's styleguide with a seameless user and developer experience in mind. For the Popup and Multi-Select components, not only is user interactivity is the focal point, but developer implementation is also a concern because both components will be widely used across development. 
+                            User experience is always a top priority of mine in design, especially since IAJES has such an established elegant aesthetic. I designed IAJES's styleguide with a seameless user and developer experience in mind. For the Popup and Multi-Select components, not only is user interactivity is the focal point, but developer implementation is also a concern because both components will be widely used across development and by future student developers who will continue to create new pages and features for IAJES.
                             <br/><br/>
                             Thus, the number one priority of these components is that the component would be <span class="highlight">functional</span>, of course, and the number two priority is that the component would be <span class="highlight">enjoyable and easy to use</span>.
                         </p>
@@ -128,21 +134,33 @@
 
                         <div id="iajes-ui-popups-window" class="window">
                             <h3>Popups</h3>
-                            <p>
-                                Popups are a completely seperate element from the rest of the site, temporarily shifting user interactivity to a new location, which means that:
+                            <div id="iajes-popups-intro" >
+                                <p>
+                                    Popups are a completely seperate element from the rest of the site, temporarily shifting user interactivity to a new location, which means that:
+                                </p>
                                 <ol>
-                                    <li>The shift to and from the popup should smooth and seamless, easing the user to this new location and back.</li>
-                                    <li>The site elements that are now in the background should not draw the user's attention and should remain unchanged as long as the user is within the popup.</li>
+                                    <li class="highlight">The shift to and from the popup should be smooth and seamless, easing the user to this new location and back.</li>
+                                    <br/>
+                                    <li class="highlight">The site elements that are now in the background should not draw the user's attention and should remain unchanged as long as the user is within the popup.</li>
                                 </ol>
-                            </p>
-                            <p style="column-count: 2;">
-                                For the first point, popups start out absent and un-rendered from the page. To open a popup, the popup must be first rendered, then animated in a smooth fade-in and maybe even a slide-in animation. To close a popup, the popup must be first animated, then un-rendered. Code executes very quickly, so it is not just a simple manner of rendering then animating. <span class="highlight">A timing function must come into play to ensure the transition is seamless</span>.
-                                <br/><br/><br/>
-                                As for the second point, the only gripe is with how browsers function. To disable background scrolling, the page's overflow must be disabled. However, elements with a disabled overflow lose their scrollbar, changing the width of the site viewport. This change of width is extremely noticable and irritating especially when there are many popups on the site. <span class="highlight">The disappearing scrollbar must be accounted for to ensure the transition is smooth</span>.
+                                <img id="iajes-popups-img" src="../assets/iajes/popup-example.gif" />
+                            </div>
+
+                            <div id="iajes-popups-points">
+                                <p>
+                                    For the first point, popups start out absent and un-rendered from the page. To open a popup, the popup must be first rendered, then animated in a smooth fade-in and maybe even a slide-in animation. To close a popup, the popup must be first animated, then un-rendered. Code executes very quickly, so it is not just a simple manner of rendering then animating. <span class="highlight">A timing function must come into play to ensure the transition is seamless</span>.
+                                </p>
+                                <p>
+                                    As for the second point, the only gripe is with how browsers function. To disable background scrolling, the page's overflow must be disabled. However, elements with a disabled overflow lose their scrollbar, changing the width of the site viewport. This change of width is extremely noticable and irritating especially when there are many popups on the site. <span class="highlight">The disappearing scrollbar must be accounted for to ensure the transition is smooth</span>.
+                                </p>
+                            </div>
+
+                            <p>
+                                By using the <span class="highlight">useEffect</span> React hook tied to a <span class="highlight">useState</span> React hook tracking the popup's visibility, I can add and remove CSS classes to achieve these two goals. By using these React hooks, these effects to ensure fluidity will be triggered regardless of if the popup visibility is changed from within the popup or from its parent component. This feature improves usability for developers. In both development and user experience, I created the popup component to be streamlined and usable. 
                             </p>
                         </div>
 
-                        <div id="iajes-ui-multiselect-window" class="window">
+                        <!-- <div id="iajes-ui-multiselect-window" class="window">
                             <h3>Multi-Select</h3>
                             <p>
                                 A multi-select allows a user to pick multiple options from a list. Unfortunately, the default HTML multi-select element is quite unintuitive and difficult for some users to utilize. A user would have to drag their cursor across their desired options, or hold CTRL to keep their desired options when picking other options.
@@ -160,7 +178,7 @@
                                 <br/>
                                 However, the mobile workaround results in multi-select having different behaviors on desktop and mobile. The desktop view would need a modified version of the default multi-select element to ensure a smoother and more accessible user experience, while the mobile view has no need of any modifications. Additionally, for the ease of development, it would be best for 
                             </p>
-                        </div>
+                        </div> -->
 
 
                     </div>

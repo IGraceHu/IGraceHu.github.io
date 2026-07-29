@@ -131,6 +131,11 @@
     }
 }
 
+#iajes-summary {
+    margin: auto 10vw;
+    /* margin-top: 50px; */
+}
+
 #iajes-need {
     display: flex;
     justify-content: center;
@@ -296,6 +301,36 @@
 
 #iajes-ui-4 > .dark-body {
     padding: 50px 10vw 15vw 10vw;
+}
+
+#iajes-popups-intro, #iajes-popups-points {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+}
+
+#iajes-popups-points {
+    margin-top: 20px;
+}
+
+#iajes-popups-img {
+    max-width: 600px;
+    grid-row: 1 / span 2;
+    grid-column: 2;
+}
+
+@media screen and (max-width: 1100px) {
+    #iajes-popups-intro, #iajes-popups-points {
+        grid-template-columns: auto;
+        justify-items: center;
+        gap: 0px;
+    }
+
+    #iajes-popups-img {
+        max-width: 600px;
+        grid-row: auto;
+        grid-column: auto;
+    }
 }
 
 
