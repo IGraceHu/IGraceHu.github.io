@@ -13,6 +13,17 @@
         createWindow($(windowEl));
     });
 
+
+    $(".acc-button").click(function(){
+        $(this).toggleClass("active");
+        let accBodyEl = $($(this).nextAll(".acc-body")[0]);
+        if (accBodyEl.css("max-height") != "0px") {
+            accBodyEl.css("max-height", "0px");
+        } else {
+            accBodyEl.css("max-height", accBodyEl.prop("scrollHeight") + "px");
+        }
+    });
+
     $("body").addClass("fade-in");
 });
 

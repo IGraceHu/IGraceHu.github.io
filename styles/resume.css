@@ -26,27 +26,33 @@
 
 h2 {
     margin-bottom: 0;
+    margin-top: 1rem;
 }
 
 h3 {
     color: #539aea;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 #resume-ed {
     grid-column: 1 / span 2;
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    gap: 40px;
 }
 
 #resume-exp {
     grid-column: 1 / span 2;
     display: grid;
-    grid-template-columns: auto auto;
+    /* grid-template-columns: auto auto; */
     gap: 40px;
 }
 
-#resume-window p {
+#resume-window p, #resume-window ul {
     margin-top: 0;
     margin-left: 20px;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 900px) {
