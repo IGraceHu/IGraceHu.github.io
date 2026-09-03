@@ -60,12 +60,12 @@ main {
     transition: 0.2s;
 }
 
-.highlight {
+.highlight, .highlight-type {
     color: #539aea;
     background-color: #ffe1f2;
 }
 
-.dark .highlight {
+.dark .highlight, .dark .highlight-type {
     color: white;
     background-color: #539aea81;
 }
@@ -81,7 +81,7 @@ main {
   60% {background-color: #539aea;}
 }
 
-.highlight::after {
+.highlight-type::after {
     content: "";
     display: inline-block;
     width: 2px;
@@ -417,8 +417,21 @@ button:hover, .button:hover {
 
 
 .acc-button {
-    display: inline;
     border-bottom: 2px transparent solid;
+    background-color: #ffe1f275;
+    transition: 0.2s;
+}
+
+.dark .acc-button {
+    color: white;
+    background-color: #539aeac9;
+}
+
+.acc-button.active {
+    background-color: #539aea4b;
+}
+
+.dark .acc-button.active {
     background-color: #ffe1f275;
 }
 
@@ -428,8 +441,9 @@ button:hover, .button:hover {
     cursor: pointer;
 }
 
-.acc-button.active {
-    border-color: #539aea;
+.dark .acc-button:hover {
+    color: white;
+    background-color: #539aea;
 }
 
 .acc-body {

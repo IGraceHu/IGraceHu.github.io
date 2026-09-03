@@ -139,20 +139,25 @@
                                     Popups are a completely seperate element from the rest of the site, temporarily shifting user interactivity to a new location, which means that:
                                 </p>
                                 <ol>
-                                    <li class="highlight">The shift to and from the popup should be smooth and seamless, easing the user to this new location and back.</li>
+                                    <li>
+                                        <div class="acc-button">
+                                            The shift to and from the popup should be smooth and seamless, easing the user to this new location and back.
+                                        </div>
+                                        <p class="acc-body">
+                                            Popups start out absent and un-rendered from the page. To open a popup, the popup must be first rendered, then animated in a smooth fade-in and maybe even a slide-in animation. To close a popup, the popup must be first animated, then un-rendered. Code executes very quickly, so it is not just a simple manner of rendering then animating. <span class="highlight">A timing function must come into play to ensure the transition is seamless</span>.
+                                        </p>
+                                    </li>
                                     <br/>
-                                    <li class="highlight">The site elements that are now in the background should not draw the user's attention and should remain unchanged as long as the user is within the popup.</li>
+                                    <li>
+                                        <div class="acc-button">
+                                            The site elements that are now in the background should not draw the user's attention and should remain unchanged as long as the user is within the popup.
+                                        </div>
+                                        <p class="acc-body">
+                                            The only gripe is with how browsers function. To disable background scrolling, the page's overflow must be disabled. However, elements with a disabled overflow lose their scrollbar, changing the width of the site viewport. This change of width is extremely noticable and irritating especially when there are many popups on the site. <span class="highlight">The disappearing scrollbar must be accounted for to ensure the transition is smooth</span>.
+                                        </p>
+                                    </li>
                                 </ol>
                                 <img id="iajes-popups-img" src="../assets/iajes/popup-example.gif" />
-                            </div>
-
-                            <div id="iajes-popups-points">
-                                <p>
-                                    For the first point, popups start out absent and un-rendered from the page. To open a popup, the popup must be first rendered, then animated in a smooth fade-in and maybe even a slide-in animation. To close a popup, the popup must be first animated, then un-rendered. Code executes very quickly, so it is not just a simple manner of rendering then animating. <span class="highlight">A timing function must come into play to ensure the transition is seamless</span>.
-                                </p>
-                                <p>
-                                    As for the second point, the only gripe is with how browsers function. To disable background scrolling, the page's overflow must be disabled. However, elements with a disabled overflow lose their scrollbar, changing the width of the site viewport. This change of width is extremely noticable and irritating especially when there are many popups on the site. <span class="highlight">The disappearing scrollbar must be accounted for to ensure the transition is smooth</span>.
-                                </p>
                             </div>
 
                             <p>
