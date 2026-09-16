@@ -1,7 +1,7 @@
 #projects-container {
     padding: 100px 10vw;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     align-items: center;;
     gap: 40px;
 }
@@ -46,6 +46,7 @@
 }
 
 #iajes-project-window .window-head {
+    background: none;
     background-color: #1EA49360;
 }
 
@@ -74,7 +75,8 @@
 }
 
 #rolf-project-window .window-head {
-    background-color: #49B5BB60;
+    background: none;
+    background-color: #49B5BB60; 
 }
 
 #rolf-project-window .window-buttons > div {
@@ -132,7 +134,7 @@
 }
 
 #iajes-summary {
-    margin: auto 10vw;
+    /* margin: auto 10vw; */
     /* margin-top: 50px; */
 }
 
@@ -279,7 +281,8 @@
 }
 
 #iajes-styleguide-window {
-    max-height: 75vh;
+    /* max-height: 75vh; */
+    display: block;
     height: 800px;
     overflow: hidden;
 }
@@ -290,7 +293,7 @@
 
 #iajes-styleguide {
     width: 100%;
-    max-height: calc(75vh - 35px);
+    max-height: calc(75vh - 100px);
     height: 765px;
 }
 
@@ -478,20 +481,6 @@
     .fade-white-top {
         opacity: 1;
     }
-}
-    
-
-#rolf-design-content-glow {
-    padding: 100px 10vw 10px 10vw;
-    box-sizing: border-box;
-    background-color: #2661ca;
-    background-image: radial-gradient(#5caed6 30%, #2661ca 70%);
-}
-
-#rolf-design-content-bottom {
-    padding: 40px 10vw 10vw 10vw;
-    box-sizing: border-box;
-    background-color: #2661ca;
 }
 
 #rolf-design-window-buttons {

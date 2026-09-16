@@ -3,12 +3,12 @@
     <head>
         <title>Isabelle Hu - Projects</title>
         <script src="jquery-4.0.0.min.js"></script>
-        <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="stylesheet" href="./styles/projects.css" />
-        <script src="./index.js" async></script>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="stylesheet" href="/styles/projects.css" />
+        <script src="/index.js" async></script>
     </head>
     <body>
-        <div id="header-container" small="true">
+        <div id="header-container" small="true" url="Isabelle Hu">
             <h1>
                 My <span class="highlight">Projects</span>
             </h1>
@@ -20,8 +20,8 @@
         <main>
             <div id="projects-container">
 
-                <a id="iajes-project-window" class="project-window" href="./projects/iajes-website-revamp.html">
-                    <div class="window">
+                <a id="iajes-project-window" class="project-window window-link" href="/projects/iajes-website-revamp.html">
+                    <div class="window-container">
                         <h2>
                             <strong>IAJES Website Revamp</strong>
                         </h2>
@@ -32,12 +32,12 @@
                                 Lead UI Designer and Full Stack Developer
                             </span>
                         </p>
-                        <img class="project-window-logo" style="opacity:0.1;" src="./assets/iajes/logo.svg" />
+                        <img class="project-window-logo" style="opacity:0.1;" src="/assets/iajes/logo.svg" />
                     </div>
                 </a>
 
-                <a id="rolf-project-window" class="project-window" href="./projects/rolf-website-redesign.html">
-                    <div class="window">
+                <a id="rolf-project-window" class="project-window window-link" href="/projects/rolf-website-redesign.html">
+                    <div class="window-container">
                         <h2>
                             <strong>River of Life Foundation Website Redesign</strong>
                         </h2>
@@ -48,7 +48,7 @@
                                 UI Design | Figma
                             </span>
                         </p>
-                        <img class="project-window-logo" src="./assets/rolf/logo.svg" />
+                        <img class="project-window-logo" src="/assets/rolf/logo.svg" />
                     </div>
                 </a>
 
@@ -57,15 +57,5 @@
 
         <div id="footer-container">
         </div>
-
-        <script>
-            function setImage(clickedButton, imageName) {
-                for (let button of document.getElementById("rolf-design-window-buttons").children) {
-                    button.classList.remove("active");
-                }
-                clickedButton.classList.add("active");
-                document.getElementById("rolf-design-window-image").setAttribute("src", "./assets/rolf/" + imageName + ".jpg")
-            }
-        </script>
     </body>
 </html>

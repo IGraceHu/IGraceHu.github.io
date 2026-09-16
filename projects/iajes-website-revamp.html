@@ -2,18 +2,19 @@
 <html>
     <head>
         <title>Isabelle Hu - IAJES Website Revamp</title>
-        <script src="../jquery-4.0.0.min.js"></script>
+        <script src="/jquery-4.0.0.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="../styles/style.css" />
-        <link rel="stylesheet" href="../styles/projects.css" />
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="stylesheet" href="/styles/style-dark.css" />
+        <link rel="stylesheet" href="/styles/projects.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <script src="../index.js" async></script>
+        <script src="/index.js" async></script>
     </head>
     <body>
-        <div id="header-container" small="true">
+        <div id="header-container" small="true" url="Isabelle Hu">
             <h1>
                 IAJES Website Revamp
             </h1>
@@ -36,14 +37,14 @@
                 </p>
             </div>
 
-            <div id="iajes-summary" class="text-col-small">
+            <div id="iajes-summary" class="text-col-small container my">
                 <p>
                     In this project, I designed the website branding and styleguide, as well as many of the page layouts across the website. I developed accessible and flexible components created to be simple to use across development by any team member. Within the technical aspects of site development, I spearheaded the phase of database development and interaction with the web interface.
                 </p>
             </div>
 
             <div id="iajes-need">
-                <div id="iajes-need-window" class="window">
+                <div id="iajes-need-window" class="window-container">
                     <p>
                         IAJES saw a need for an online platform where IAJES could share their resources and support their international academic community in collaboration and connection.
                     </p>
@@ -52,6 +53,7 @@
 
             <section id="iajes-features" class="text-col-small">
                 <p>To address this need, we endeavored to create four main features in the new website:</p>
+                <br/>
                 <div id="iajes-features-row">
                     <div>
                         <i class="bi bi-people-fill"></i>
@@ -70,16 +72,17 @@
                         Emailed Newsletter
                     </div>
                 </div>
+                <br/>
                 <p>Over the course of the project, I designed simple yet elegant assets and components for the team to use throughout the development process. Every layout, component, and interaction were designed with IAJES's mission and initial aesthetic in mind, and I brought my detail-oriented development and diligent work ethic to other areas of the project when needed.</p>
             </section>
 
             <section id="iajes-ui">
-                <div class="window window-title">
+                <div class="window-container">
                     <h2>Branding and UI Development</h2>
                 </div>
                 <div id="iajes-ui-1" class="text-col-small">
                     <div>
-                        <img width="300" src="../assets/iajes/logo-iajes.svg" />
+                        <img width="300" src="/assets/iajes/logo-iajes.svg" />
                     </div>
                     <div>
                         <p>
@@ -88,9 +91,9 @@
                             Even though this logo was my only source of inspiration, I quickly saw multiple motifs that I could draw upon to create other assets and establish the style of the site:
                         </p>
                         <div id="iajes-motifs-column">
-                            <img src="../assets/iajes/motif-1.svg" />
-                            <img src="../assets/iajes/motif-2.svg" />
-                            <img src="../assets/iajes/motif-3.svg" />
+                            <img src="/assets/iajes/motif-1.svg" />
+                            <img src="/assets/iajes/motif-2.svg" />
+                            <img src="/assets/iajes/motif-3.svg" />
                         </div>
                     </div>
                 </div>
@@ -111,91 +114,83 @@
                 <div id="iajes-ui-3">
                     <p>With these guiding aesthetics, I created a styleguide for the site with an emphasis on lines and gradients. Not only does the styleguide describe preset styles for significant HTML elements, I also added examples of custom components I created as assets for more visual interest.</p>
                     <br/>
-                    <div id="iajes-styleguide-window" class="window">
+                    <div id="iajes-styleguide-window" class="window-container">
                         <div style="z-index:1000;position:absolute; height:120px; width:100%; opacity:0; top:0;left:0;"></div>
                          <iframe id="iajes-styleguide" src="https://iajes-website--iajes-site.us-east4.hosted.app/styleguide" title="IAJES Styleguide"></iframe> 
                     </div>
                 </div>
 
-                <div id="iajes-ui-4" class="dark">
-                    <div class="dark-start">
-                        <img class="dark-cloud-left" src="../assets/project-start-cloud-left.svg" />
-                        <img class="dark-cloud-right" src="../assets/project-start-cloud-right.svg" />
-                    </div>
-
-                    <div class="dark-body">
-                        <h2 style="text-align: center;">User Experience</h2>
-                        <p>
-                            User experience is always a top priority of mine in design, especially since IAJES has such an established elegant aesthetic. I designed IAJES's styleguide with a seameless user and developer experience in mind. For the Popup and Multi-Select components, not only is user interactivity is the focal point, but developer implementation is also a concern because both components will be widely used across development and by future student developers who will continue to create new pages and features for IAJES.
-                            <br/><br/>
-                            Thus, the number one priority of these components is that the component would be <span class="highlight">functional</span>, of course, and the number two priority is that the component would be <span class="highlight">enjoyable and easy to use</span>.
-                        </p>
+                <div id="iajes-ui-4" class="dark-section">
+                    <h2 style="text-align: center;">User Experience</h2>
+                    <p>
+                        User experience is always a top priority of mine in design, especially since IAJES has such an established elegant aesthetic. I designed IAJES's styleguide with a seameless user and developer experience in mind. For the Popup and Multi-Select components, not only is user interactivity is the focal point, but developer implementation is also a concern because both components will be widely used across development and by future student developers who will continue to create new pages and features for IAJES.
                         <br/><br/>
+                        Thus, the number one priority of these components is that the component would be <span class="text-important">functional</span>, of course, and the number two priority is that the component would be <span class="text-important">enjoyable and easy to use</span>.
+                    </p>
+                    <br/><br/>
 
-                        <div id="iajes-ui-popups-window" class="window">
-                            <h3>Popups</h3>
-                            <div id="iajes-popups-intro" >
-                                <p>
-                                    Popups are a completely seperate element from the rest of the site, temporarily shifting user interactivity to a new location, which means that:
-                                </p>
-                                <ol>
-                                    <li>
-                                        <div class="acc-button">
+                    <div id="iajes-ui-popups-window" class="window-container">
+                        <h3>Popups</h3>
+                        <div id="iajes-popups-intro" >
+                            <p>
+                                Popups are a completely seperate element from the rest of the site, temporarily shifting user interactivity to a new location, which means that:
+                            </p>
+                            <ol>
+                                <li>
+                                    <div class="acc">
+                                        <div class="acc-button no-chevron">
                                             The shift to and from the popup should be smooth and seamless, easing the user to this new location and back.
                                         </div>
                                         <p class="acc-body">
-                                            Popups start out absent and un-rendered from the page. To open a popup, the popup must be first rendered, then animated in a smooth fade-in and maybe even a slide-in animation. To close a popup, the popup must be first animated, then un-rendered. Code executes very quickly, so it is not just a simple manner of rendering then animating. <span class="highlight">A timing function must come into play to ensure the transition is seamless</span>.
+                                            Popups start out absent and un-rendered from the page. To open a popup, the popup must be first rendered, then animated in a smooth fade-in and maybe even a slide-in animation. To close a popup, the popup must be first animated, then un-rendered. Code executes very quickly, so it is not just a simple manner of rendering then animating. <span class="text-important">A timing function must come into play to ensure the transition is seamless</span>.
                                         </p>
-                                    </li>
-                                    <br/>
-                                    <li>
-                                        <div class="acc-button">
+                                    </div>
+                                </li>
+                                <br/>
+                                <li>
+                                    <div class="acc">
+                                        <div class="acc-button no-chevron">
                                             The site elements that are now in the background should not draw the user's attention and should remain unchanged as long as the user is within the popup.
                                         </div>
                                         <p class="acc-body">
-                                            The only gripe is with how browsers function. To disable background scrolling, the page's overflow must be disabled. However, elements with a disabled overflow lose their scrollbar, changing the width of the site viewport. This change of width is extremely noticable and irritating especially when there are many popups on the site. <span class="highlight">The disappearing scrollbar must be accounted for to ensure the transition is smooth</span>.
+                                            The only gripe is with how browsers function. To disable background scrolling, the page's overflow must be disabled. However, elements with a disabled overflow lose their scrollbar, changing the width of the site viewport. This change of width is extremely noticable and irritating especially when there are many popups on the site. <span class="text-important">The disappearing scrollbar must be accounted for to ensure the transition is smooth</span>.
                                         </p>
-                                    </li>
-                                </ol>
-                                <img id="iajes-popups-img" src="../assets/iajes/popup-example.gif" />
-                            </div>
-
-                            <p>
-                                By using the <span class="highlight">useEffect</span> React hook tied to a <span class="highlight">useState</span> React hook tracking the popup's visibility, I can add and remove CSS classes to achieve these two goals. By using these React hooks, these effects to ensure fluidity will be triggered regardless of if the popup visibility is changed from within the popup or from its parent component. This feature improves usability for developers. In both development and user experience, I created the popup component to be streamlined and usable. 
-                            </p>
+                                    </div>
+                                </li>
+                            </ol>
+                            <img id="iajes-popups-img" src="/assets/iajes/popup-example.gif" />
                         </div>
 
-                        <!-- <div id="iajes-ui-multiselect-window" class="window">
-                            <h3>Multi-Select</h3>
-                            <p>
-                                A multi-select allows a user to pick multiple options from a list. Unfortunately, the default HTML multi-select element is quite unintuitive and difficult for some users to utilize. A user would have to drag their cursor across their desired options, or hold CTRL to keep their desired options when picking other options.
-                                <br/>
-                                The expected behavior of a multi-select would be:
-                            </p>
-                            <ol>
-                                <li>Clicking on an option selects the option, and clicking on a selected option deselects the option.</li>
-                                <li>Clicking on an option does not affect other options that have already been selected.</li>
-                            </ol>
-                            <p>
-                                By using the multi-select as a controlled input with React and building a custom function to update the selected options when the user interacts with it, I built a multi-select input that fulfills both of those needs.
-                                
-                                Mobile devices and other touchscreen devices counteract this issue by using a extraneous and more accessible selection interface instead.
-                                <br/>
-                                However, the mobile workaround results in multi-select having different behaviors on desktop and mobile. The desktop view would need a modified version of the default multi-select element to ensure a smoother and more accessible user experience, while the mobile view has no need of any modifications. Additionally, for the ease of development, it would be best for 
-                            </p>
-                        </div> -->
-
-
+                        <p>
+                            <br/>
+                            By using the <span class="text-important">useEffect</span> React hook tied to a <span class="text-important">useState</span> React hook tracking the popup's visibility, I can add and remove CSS classes to achieve these two goals. By using these React hooks, these effects to ensure fluidity will be triggered regardless of if the popup visibility is changed from within the popup or from its parent component. This feature improves usability for developers. In both development and user experience, I created the popup component to be streamlined and usable. 
+                        </p>
                     </div>
 
-                    
+                    <!-- <div id="iajes-ui-multiselect-window" class="window">
+                        <h3>Multi-Select</h3>
+                        <p>
+                            A multi-select allows a user to pick multiple options from a list. Unfortunately, the default HTML multi-select element is quite unintuitive and difficult for some users to utilize. A user would have to drag their cursor across their desired options, or hold CTRL to keep their desired options when picking other options.
+                            <br/>
+                            The expected behavior of a multi-select would be:
+                        </p>
+                        <ol>
+                            <li>Clicking on an option selects the option, and clicking on a selected option deselects the option.</li>
+                            <li>Clicking on an option does not affect other options that have already been selected.</li>
+                        </ol>
+                        <p>
+                            By using the multi-select as a controlled input with React and building a custom function to update the selected options when the user interacts with it, I built a multi-select input that fulfills both of those needs.
+                            
+                            Mobile devices and other touchscreen devices counteract this issue by using a extraneous and more accessible selection interface instead.
+                            <br/>
+                            However, the mobile workaround results in multi-select having different behaviors on desktop and mobile. The desktop view would need a modified version of the default multi-select element to ensure a smoother and more accessible user experience, while the mobile view has no need of any modifications. Additionally, for the ease of development, it would be best for 
+                        </p>
+                    </div> -->
 
-                    <div class="dark-end">
-                        <img class="dark-cloud-left" src="../assets/project-end-cloud-left.svg" />
-                        <img class="dark-cloud-right" src="../assets/project-end-cloud-right.svg" />
-                    </div>
+
                 </div>
-            </section> 
+
+            </section>
 
 
 

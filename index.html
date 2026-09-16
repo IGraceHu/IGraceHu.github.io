@@ -5,12 +5,13 @@
         <script src="jquery-4.0.0.min.js"></script>
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="stylesheet" href="./styles/home.css" />
-        <script src="./index.js" async></script>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="stylesheet" href="/styles/style-dark.css" />
+        <link rel="stylesheet" href="/styles/home.css" />
+        <script src="/index.js" async></script>
     </head>
     <body>
-        <div id="header-container">
+        <div id="header-container" url="">
             <h1>
                 Hello World!
                 <br /><br />
@@ -27,16 +28,9 @@
             <section id="about">
                 <div id="about-bg">
                     <div id="about-bg-wrapper">
-                        <img class="cloud-light-1" src="./assets/cloud-light-1.svg" />
-                        <img class="cloud-light-2" src="./assets/cloud-light-1.svg" />
-                        <img class="cloud-light-3" src="./assets/cloud-light-2.svg" />
-                        <img class="cloud-light-4" src="./assets/cloud-light-3.svg" />
-                        <img class="cloud-light-5" src="./assets/cloud-light-4.svg" />
-                        <img class="cloud-light-6" src="./assets/cloud-light-5.svg" />
-
-                        <img class="cloud-1" src="./assets/cloud-1.svg" />
-                        <img class="cloud-2" src="./assets/cloud-2.svg" />
-                        <img class="cloud-3" src="./assets/cloud-3.svg" />
+                        <img class="cloud-1" src="/assets/cloud-1.svg" />
+                        <img class="cloud-2" src="/assets/cloud-2.svg" />
+                        <img class="cloud-3" src="/assets/cloud-3.svg" />
                     </div>
                 </div>
                 <div id="about-portrait-wrapper">
@@ -44,17 +38,17 @@
                 </div>
                 <div id="about-content-container">
                     <div>
-                        <div id="about-window-1" class="window mini mini-left">
+                        <div id="about-window-1" class="window-container mini mini-left">
                             <p>
-                                # Who I am:
+                                <strong># Who I am:</strong>
                                 <br />
-                                I am a <span class="text-lightblue">web designer</span> and a <span class="text-lightblue">digital illustrator</span>  focused on creating stories that touch people's lives in creative and beautiful ways.
+                                I am a <span class="text-important">web designer</span> and a <span class="text-important">digital illustrator</span>  focused on creating stories that touch people's lives in creative and beautiful ways.
                             </p>
                         </div>
 
-                        <div id="about-window-3" class="window mini mini-left">
+                        <div id="about-window-3" class="window-container mini mini-left">
                             <p>
-                                # Where I'm at:
+                                <strong># Where I'm at:</strong>
                                 <br />
                                 * <a href="https://www.linkedin.com/in/isabellehu06/"><span class="text-lightblue">LinkedIn</span></a>
                                 <br/>
@@ -66,45 +60,27 @@
                     </div>
                     <div></div>
                     <div>
-                        <div id="about-window-2" class="window mini mini-right">
+                        <div id="about-window-2" class="window-container mini mini-right">
                             <p>
-                                # Where I'm from:
+                                <strong># Where I'm from:</strong>
                                 <br />
-                                I am a newly graduated <span class="text-lightblue">Web Design and Engineering</span> student from <span class="text-lightblue">Santa Clara University</span>.
+                                I am newly graduated in <span class="text-important">Web Design and Engineering</span> from SCU, and currently based in <span class="text-important">New York City</span>.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="project" class="dark">
-                <div class="dark-start">
-                    <img class="dark-cloud-left" src="./assets/project-start-cloud-left.svg" />
-                    <img class="dark-cloud-right" src="./assets/project-start-cloud-right.svg" />
-                </div>
-                
-                <div id="project-bg">
-                    <div id="project-bg-wrapper">
-                        <img class="cloud-dark-1" src="./assets/cloud-dark-1.svg" />
-                        <img class="cloud-dark-2" src="./assets/cloud-dark-2.svg" />
-                        <img class="cloud-dark-3" src="./assets/cloud-dark-3.svg" />
-
-                        <img class="star star-1" src="./assets/star.svg" />
-                        <img class="star star-2" src="./assets/star.svg" />
-                        <img class="star star-3" src="./assets/star.svg" />
-                        <img class="star star-4" src="./assets/star.svg" />
-                    </div>
-                </div>
-
-                <div id="project-body">
-                    <a class="window-link" href="./projects.html"><div id="project-title-window" class="window">
+            <section id="project" class="dark-section">
+                <div id="project-body" class="container">
+                    <a class="window-link" href="/projects.html"><div id="project-title-window" class="window-container">
                         <h2>My Projects</h2>
                     </div></a>
                     <br />
 
                     <div id="projects-container">
-                        <a id="iajes-project-window" class="project-window" href="./projects/iajes-website-revamp.html">
-                            <div class="window">
+                        <a id="iajes-project-window" class="project-window window-link" href="/projects/iajes-website-revamp.html">
+                            <div class="window-container">
                                 <h2>
                                     <strong>IAJES Website Revamp</strong>
                                 </h2>
@@ -115,12 +91,12 @@
                                         Lead UI Designer and Full Stack Developer
                                     </span>
                                 </p>
-                                <img class="project-window-logo" style="opacity:0.2;" src="./assets/iajes/logo.svg" />
+                                <img class="project-window-logo" style="opacity:0.2;" src="/assets/iajes/logo.svg" />
                             </div>
                         </a>
 
-                        <a id="rolf-project-window" class="project-window" href="./projects/rolf-website-redesign.html">
-                            <div class="window">
+                        <a id="rolf-project-window" class="project-window window-link" href="/projects/rolf-website-redesign.html">
+                            <div class="window-container">
                                 <h2>
                                     <strong>River of Life Foundation Website Redesign</strong>
                                 </h2>
@@ -131,43 +107,38 @@
                                         UI Design | Figma
                                     </span>
                                 </p>
-                                <img class="project-window-logo" src="./assets/rolf/logo.svg" />
+                                <img class="project-window-logo" src="/assets/rolf/logo.svg" />
                             </div>
                         </a>
                     </div>
                 </div>
-
-                <div class="dark-end">
-                    <img class="dark-cloud-left" src="./assets/project-end-cloud-left.svg" />
-                    <img class="dark-cloud-right" src="./assets/project-end-cloud-right.svg" />
-                </div>
             </section>
 
             <section id="illustration">
-                <a class="window-link" href="./illustrations.html"><div id="illustration-title-window" class="window">
+                <a class="window-link" href="/illustrations.html"><div id="illustration-title-window" class="window-container">
                     <h2>My Illustrations</h2>
                 </div></a>
                 <div id="illustration-images">
                     <div>
-                        <img id="folly" src="./images/folly.png" />
-                        <img id="ocean" src="./images/empty_ocean.png" />
+                        <img id="folly" src="/images/folly.png" />
+                        <img id="ocean" src="/images/empty_ocean.png" />
                     </div>
                     <div>
-                        <img id="blooming" src="./images/blooming-fields.png" />
-                        <img id="pldance" src="./images/render-dance-pl.png" />
+                        <img id="blooming" src="/images/blooming-fields.png" />
+                        <img id="pldance" src="/images/render-dance-pl.png" />
                     </div>
                     <div>
-                        <img id="wings" src="./images/wings.png" />
-                        <img id="dome" src="./images/meditation.png" />
+                        <img id="wings" src="/images/wings.png" />
+                        <img id="dome" src="/images/meditation.png" />
                     </div>
                     <div>
-                        <img id="dorm" src="./images/render-blestie-dorm.png" />
-                        <img id="garden" src="./images/garden.png" />
-                        <img id="dance" src="./images/dance.png" />
+                        <img id="dorm" src="/images/render-blestie-dorm.png" />
+                        <img id="garden" src="/images/garden.png" />
+                        <img id="dance" src="/images/dance.png" />
                     </div>
                     <div>
-                        <img id="glass" src="./images/stained_glass.png" />
-                        <img id="clouds" src="./images/clouds.png" />
+                        <img id="glass" src="/images/stained_glass.png" />
+                        <img id="clouds" src="/images/clouds.png" />
                     </div>
                 </div>
             </section>

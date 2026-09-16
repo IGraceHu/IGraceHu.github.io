@@ -9,8 +9,12 @@
     populateNav($("#nav-container"));
     populateFooter($("#footer-container"));
 
-    $(".window").each((i, windowEl) => {
-        createWindow($(windowEl));
+    $(".dark-section").each((i, darkSecEl) => {
+        makeDark($(darkSecEl));
+    });
+
+    $(".window-container").each((i, windowContEl) => {
+        createWindow($(windowContEl));
     });
 
 
@@ -27,9 +31,26 @@
     $("body").addClass("fade-in");
 });
 
-function createWindow(windowElement) {
-    if (windowElement) {
+function makeDark(darkSecEl) {
+    if (darkSecEl) {
+        const cloudsTop = $(`<div class="dark-start">
+                    <img class="dark-cloud-left" src="/assets/project-start-cloud-left.svg" />
+                    <img class="dark-cloud-right" src="/assets/project-start-cloud-right.svg" />
+                </div>`);
+        const cloudsBottom = $(`<div class="dark-end">
+                    <img class="dark-cloud-left" src="/assets/project-end-cloud-left.svg" />
+                    <img class="dark-cloud-right" src="/assets/project-end-cloud-right.svg" />
+                </div>`);
+        const darkBodyEl = $('<div class="dark-body"></div>');
+        console.log(darkSecEl);
+        darkBodyEl.append(darkSecEl.contents());
 
+        darkSecEl.append(cloudsTop, darkBodyEl, cloudsBottom);
+    }
+}
+
+function createWindow(windowContElement) {
+    if (windowContElement) {
         const windowHeadEl = $(`<div class="window-head">
                 <div class="window-buttons">
                     <div></div>
@@ -38,45 +59,49 @@ function createWindow(windowElement) {
                 </div>
             </div>`);
 
-        if (windowElement.children(".window-url")) {
-            const windowUrlEl = windowElement.find(".window-head-url");
-            if (windowUrlEl != null) {
-                windowHeadEl.append(windowUrlEl);
-            }
+        if (windowContElement.attr("url")) {
+            windowHeadEl.append($('<div class="window-head-url"></div>').append(windowContElement.attr("url")));
         }
 
-        const windowBodyEl = $('<div class="window-body"></div>');
-        const childList = windowElement.children().not(".window-head");
-        windowBodyEl.append(childList);
+        // if (windowContElement.children(".window-url")) {
+        //     const windowUrlEl = windowContElement.find(".window-head-url");
+        //     if (windowUrlEl != null) {
+        //         windowHeadEl.append(windowUrlEl);
+        //     }
+        // }
 
-        windowElement.append(windowHeadEl, windowBodyEl);
+        const windowBodyEl = $('<div class="window-body"></div>');
+        windowBodyEl.append(windowContElement.contents());
+
+        const windowEl = $('<div class="window"></div>');
+        windowEl.append(windowHeadEl, windowBodyEl);
+
+
+        windowContElement.append(windowEl);
     }
 }
 
 function populateHeader(headerContainer, small = false) {
     if (headerContainer) {
-        const depth = currentDepthCount();
-        console.log(depth);
-
         const headerText = headerContainer.children("h1")[0];
 
         const headerEl = $("<div></div");
 
         headerEl.append($(`<div id="header-clouds">
-                <img class="header-cloud-left" src="${depth}/assets/header-cloud-left.svg" />
-                <img class="header-cloud-right" src="${depth}/assets/header-cloud-right.svg" />
+                <img class="header-cloud-left" src="/assets/header-cloud-left.svg" />
+                <img class="header-cloud-right" src="/assets/header-cloud-right.svg" />
             </div>`))
 
         if (!small) {
             headerEl.attr("id", "header");
             headerEl.append($(`<div id="header-logo-wrapper">
-                    <img id="header-logo" src="${depth}/assets/logo-light.svg" />
+                    <img id="header-logo" src="/assets/logo-light.svg" />
                 </div>`));
         } else {
             headerEl.attr("id", "header-small");
         }
 
-        const headerWindow = $(`<div id="header-window" class="window"></div>`).append(headerText);
+        const headerWindow = $(`<div id="header-window" class="window-container" url="${headerContainer.attr("url")}" ></div>`).append(headerText);
         headerEl.append($('<div id="header-window-wrapper"></div>').append(headerWindow));
 
         headerContainer.append(headerEl);
@@ -84,20 +109,18 @@ function populateHeader(headerContainer, small = false) {
 }
 
 function populateNav(navContainer) {
-    if (navContainer) {
-        const depth = currentDepthCount();
-        
+    if (navContainer) {        
         const navlist = {
-            home: location.pathname.length == 1 ? '<a class="active">Home</a>' : `<a href="${depth}/">Home</a>`,
-            projects: location.pathname.includes("projects.html") ? '<a class="active">Projects</a>' : `<a href="${depth}/projects.html">Projects</a>`,
-            illustrations: location.pathname.includes("illustrations.html") ? '<a class="active">Illustrations</a>' : `<a href="${depth}/illustrations.html">Illustrations</a>`,
-            resume: location.pathname.includes("resume.html") ? '<a class="active">Resume</a>' : `<a href="${depth}/resume.html">Resume</a>`,
+            home: location.pathname.length == 1 ? '<a class="active">Home</a>' : `<a href="/">Home</a>`,
+            projects: location.pathname.includes("projects.html") ? '<a class="active">Projects</a>' : `<a href="/projects.html">Projects</a>`,
+            illustrations: location.pathname.includes("illustrations.html") ? '<a class="active">Illustrations</a>' : `<a href="/illustrations.html">Illustrations</a>`,
+            resume: location.pathname.includes("resume.html") ? '<a class="active">Resume</a>' : `<a href="/resume.html">Resume</a>`,
         }
 
         const navLeft = $('<div id="nav-left"></div>').append(navlist.home, navlist.projects);
         const navRight = $('<div id="nav-right"></div>').append(navlist.illustrations, navlist.resume);
 
-        const nav = $(`<div id="nav-content-container"></div>`).append(navLeft, $(`<img id="nav-img" src="${depth}/assets/logo-small.svg" />`), navRight);
+        const nav = $(`<div id="nav-content-container"></div>`).append(navLeft, $(`<img id="nav-img" src="/assets/logo-small.svg" />`), navRight);
 
         navContainer.append(nav);
     }
@@ -107,63 +130,44 @@ function populateNav(navContainer) {
 
 function populateFooter(footerContainer) {
     if (footerContainer) {
-        const depth = currentDepthCount();
         footerContainer.html(`<section id="footer">
                 <div id="footer-back-container">
-                    <img id="footer-back-cloud-right" src="${depth}/assets/cloud-1.svg" />
-                    <img id="footer-back-cloud-left" src="${depth}/assets/cloud-2.svg" />
-                    <span>
-                        <img class="footer-light-clouds" src="${depth}/assets/cloud-light-1.svg" />
-                        <img class="footer-light-clouds" src="${depth}/assets/cloud-light-2.svg" />
-                        <img class="footer-light-clouds" src="${depth}/assets/cloud-light-3.svg" />
-                        <img class="footer-light-clouds" src="${depth}/assets/cloud-light-4.svg" />
-                    </span>
+                    <img id="footer-back-cloud-right" src="/assets/cloud-1.svg" />
+                    <img id="footer-back-cloud-left" src="/assets/cloud-2.svg" />
                 </div>
                 <div id="footer-padder"></div>
-                <div id="footer-window" class="window window-url">
-                    <div class="window-head-url">
-                        https://www.igracehu.github.io/
-                    </div>
+                <div id="footer-window" class="window-container" url="https://www.igracehu.github.io/">
                     <div id="footer-content">
                         <div>
                             <h1>Let's create something beautiful together!</h1>
                             <div id="footer-buttons">
-                                <a class="button out" href="https://www.linkedin.com/in/isabellehu06/"><img src="${depth}/assets/linkedin.png" /> LinkedIn <svg class="arrow-out" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.32 24.32"><path class="cls-1" d="M2,2h19.02c.72,0,1.3.58,1.3,1.3v19.02"/>   <line class="cls-1" x1="2.29" y1="22.03" x2="21.34" y2="2.98"/> </svg></a>
-                                <a class="button out" href="https://github.com/IGraceHu"><img src="${depth}/assets/github.svg" />Github <svg class="arrow-out" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.32 24.32"><path class="cls-1" d="M2,2h19.02c.72,0,1.3.58,1.3,1.3v19.02"/>   <line class="cls-1" x1="2.29" y1="22.03" x2="21.34" y2="2.98"/> </svg></a>
-                                <div class="button wide"><img src="${depth}/assets/mail.svg" /> igracehu@gmail.com</div>
-                                <div class="button wide"><img class="phone" src="${depth}/assets/phone.svg" /> +1(408)641-1066</div>
+                                <a class="button out" href="https://www.linkedin.com/in/isabellehu06/"><img src="/assets/linkedin.png" /> LinkedIn <svg class="arrow-out" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.32 24.32"><path class="cls-1" d="M2,2h19.02c.72,0,1.3.58,1.3,1.3v19.02"/>   <line class="cls-1" x1="2.29" y1="22.03" x2="21.34" y2="2.98"/> </svg></a>
+                                <a class="button out" href="https://github.com/IGraceHu"><img src="/assets/github.svg" />Github <svg class="arrow-out" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.32 24.32"><path class="cls-1" d="M2,2h19.02c.72,0,1.3.58,1.3,1.3v19.02"/>   <line class="cls-1" x1="2.29" y1="22.03" x2="21.34" y2="2.98"/> </svg></a>
+                                <div class="button wide"><img src="/assets/mail.svg" /> igracehu@gmail.com</div>
+                                <div class="button wide"><img class="phone" src="/assets/phone.svg" /> +1(408)641-1066</div>
                             </div>
                             <p id="footer-links">
-                                * <a href="${depth}/projects.html">Projects <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.98 16.34"> <line class="cls-1" x1="1" y1="8.17" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="1" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="15.34" x2="16.98" y2="8.17"/> </svg></a>
+                                <br/>
+                                * <a href="/projects.html">Projects <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.98 16.34"> <line class="cls-1" x1="1" y1="8.17" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="1" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="15.34" x2="16.98" y2="8.17"/> </svg></a>
                                 <br />
-                                * <a href="${depth}/illustrations.html">Illustrations <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.98 16.34"> <line class="cls-1" x1="1" y1="8.17" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="1" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="15.34" x2="16.98" y2="8.17"/> </svg></a>
+                                * <a href="/illustrations.html">Illustrations <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.98 16.34"> <line class="cls-1" x1="1" y1="8.17" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="1" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="15.34" x2="16.98" y2="8.17"/> </svg></a>
                                 <br />
-                                * <a href="${depth}/resume.html">Resume <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.98 16.34"> <line class="cls-1" x1="1" y1="8.17" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="1" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="15.34" x2="16.98" y2="8.17"/> </svg></a>
+                                * <a href="/resume.html">Resume <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.98 16.34"> <line class="cls-1" x1="1" y1="8.17" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="1" x2="16.98" y2="8.17"/>   <line class="cls-1" x1="9.81" y1="15.34" x2="16.98" y2="8.17"/> </svg></a>
                             </p>
                         </div>
                         <div>
                             <div id="footer-image">
-                                <img src="${depth}/assets/portrait-half.png" />
+                                <img src="/assets/portrait-half.png" />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="footer-end-container">
-                    <img id="footer-end" src="${depth}/assets/footer-end.svg" />
+                    <img id="footer-end" src="/assets/footer-end.svg" />
                     <div id="footer-end-end"></div>
                 </div>
             </section>`);
     }
-}
-
-function currentDepthCount() {
-    let i = 0;
-    for (let k = 0; k < location.pathname; k++) {
-        if (location.pathname[k] == "/") {
-            i++;
-        }
-    }
-    return ".".repeat(i);
 }
 
 document.addEventListener("DOMContentLoaded", function () {

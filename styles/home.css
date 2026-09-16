@@ -2,6 +2,7 @@
 
 #about {
     padding: 50px;
+    padding-bottom: 0;
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -38,7 +39,7 @@
     top:0;
     left: 0;
     display: grid;
-    grid-template-columns: auto 16vw auto;
+    grid-template-columns: auto 18vw auto;
     z-index: 9;
 }
 
@@ -111,56 +112,38 @@
     width: 220px;
 }
 
+@keyframes cloud-float {
+    0% {padding-top: 0px;}
+    100% {padding-top: 10px;}
+}
+
 #about-bg .cloud-1 {
     position: absolute;
-    width: 360px;
+    max-width: 360px;
+    width: 40vw;
     left: -30px;
     top: 300px;
+    animation: cloud-float 1s infinite alternate ease-in-out;
 }
 
 #about-bg .cloud-2 {
     position: absolute;
-    width: 360px;
+    max-width: 360px;
+    width: 40vw;
     right: -30px;
     top: 500px;
+    animation: cloud-float 1s infinite alternate ease-in-out;
+    animation-delay: 0.3s;
 }
 
 #about-bg .cloud-3 {
     position: absolute;
-    width: 220px;
-    right: 300px;
+    max-width: 220px;
+    width: 30vw;
+    right: 20vw;
     top: 100px;
-}
-
-#about-bg .cloud-light-1 {
-    left: 100px;
-    top: 70px;
-}
-
-#about-bg .cloud-light-2 {
-    right: -50px;
-    top: 100px;
-}
-
-#about-bg .cloud-light-3 {
-    right: 600px;
-    top: 170px;
-    width: 190px;
-}
-
-#about-bg .cloud-light-4 {
-    left: 500px;
-    top: 400px;
-}
-
-#about-bg .cloud-light-5 {
-    right: 400px;
-    top: 650px;
-}
-
-#about-bg .cloud-light-6 {
-    left: 100px;
-    top: 720px;
+    animation: cloud-float 1s infinite alternate ease-in-out;
+    animation-delay: 0.6s;
 }
 
 
@@ -168,10 +151,10 @@
 /* PROJECT ******************************************************************************************************************************/
 
 #project-body {
-    padding: 100px 10vw 15vw 10vw;
-    box-sizing: border-box;
-    background-color: #2661ca;
-    background-image: radial-gradient(#5caed6 30%, #2661ca 70%);
+    /* padding: 100px 10vw 15vw 10vw; */
+    /* box-sizing: border-box; */
+    /* background-color: #2661ca; */
+    /* background-image: radial-gradient(#5caed6 30%, #2661ca 70%); */
 }
 
 #project-title-window {
@@ -211,72 +194,6 @@
 
 }
 
-#project-bg {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-#project-bg-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-#project-bg .cloud-dark-1 {
-    position: absolute;
-    width: 360px;
-    left: 30px;
-    top: 600px;
-}
-
-#project-bg .cloud-dark-2 {
-    position: absolute;
-    width: 360px;
-    right: 30px;
-    top: 800px;
-}
-
-#project-bg .cloud-dark-3 {
-    position: absolute;
-    width: 360px;
-    left: 120px;
-    top: 970px;
-}
-
-#project-bg .star {
-    width: 50px;
-    position: absolute;
-}
-
-#project-bg .star-1 {
-    right: 100px;
-    top: 400px;
-}
-
-#project-bg .star-2 {
-    right: 500px;
-    top: 500px;
-}
-
-#project-bg .star-3 {
-    left: 300px;
-    top: 900px;
-}
-
-#project-bg .star-4 {
-    left: 500px;
-    top: 1100px;
-}
-
-
-@media screen and (max-width: 1200px) {
-    #project-bg .star-4 {
-        display: hidden;
-    }
-}
-
 
 /* ILLUSTRATION ******************************************************************************************************************************/
 
@@ -287,7 +204,6 @@
 }
 
 #illustration-title-window {
-    width: 300px;
     position: relative;
     z-index: 1;
 }
@@ -313,7 +229,15 @@
 #illustration-images > div {
     display:block;
     position: relative;
+
+    animation: cloud-float 1s infinite alternate ease-in-out;
 }
+
+/* #illustration-images > div:nth-child(1) { animation-delay: 0.3s } */
+#illustration-images > div:nth-child(2) { animation-delay: 0.3s }
+#illustration-images > div:nth-child(3) { animation-delay: 0.6s }
+#illustration-images > div:nth-child(4) { animation-delay: 0.9s }
+#illustration-images > div:nth-child(5) { animation-delay: 1.2s }
 
 #illustration-images img {
     width: 100%;

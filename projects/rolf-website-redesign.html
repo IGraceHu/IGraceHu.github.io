@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>Isabelle Hu - ROLF Website Redesign</title>
-        <script src="../jquery-4.0.0.min.js"></script>
-        <link rel="stylesheet" href="../styles/style.css" />
-        <link rel="stylesheet" href="../styles/projects.css" />
-        <script src="../index.js" async></script>
+        <script src="/jquery-4.0.0.min.js"></script>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="stylesheet" href="/styles/style-dark.css" />
+        <link rel="stylesheet" href="/styles/projects.css" />
+        <script src="/index.js" async></script>
     </head>
     <body>
-        <div id="header-container" small="true">
+        <div id="header-container" small="true" url="Isabelle Hu">
             <h1>
                 River of Life Foundation Website Redesign
             </h1>
@@ -21,7 +22,7 @@
             <div id="rolf-container">
                 <section id="rolf-intro" class="dark">
                     <div id="rolf-intro-content">
-                        <p id="rolf-intro-desc">
+                        <p id="rolf-intro-desc" style="color: white;">
                             For my Website Graphic Design course, we were tasked to redesign a non-profit organization's website.
                             <br />
                             I picked River of Life Foundation, pushing the motif of river and water to create a unique and and modern identity for ROLF.
@@ -29,32 +30,29 @@
                         <br />
                         <div id="rolf-intro-orig-container">
                             <div id="rolf-intro-orig-desc">
-                                <div class="window">
+                                <div class="window-container">
                                     <p>
                                         This is ROLF's original website, which I am aiming to improve upon.
                                     </p>
                                 </div>
                             </div>
 
-                            <div id="rolf-intro-orig" class="window window-url">
-                                <div class="window-head-url">
-                                    https://rolfusa.org
-                                </div>
-                                <img class="window-image" src="../assets/rolf/original.png" />
+                            <div id="rolf-intro-orig" class="window-container" url="https://rolfusa.org">
+                                <img class="window-image" src="/assets/rolf/original.png" />
                             </div>
                         </div>
                     </div>
                     <div class="dark-end">
-                        <img class="dark-cloud-left" src="../assets/project-end-cloud-left.svg" />
-                        <img class="dark-cloud-right" src="../assets/project-end-cloud-right.svg" />
+                        <img class="dark-cloud-left" src="/assets/project-end-cloud-left.svg" />
+                        <img class="dark-cloud-right" src="/assets/project-end-cloud-right.svg" />
                     </div>
                 </section>
                 
             
 
                 <section id="rolf-research">
-                    <img id="research-img" src="../assets/rolf/logo.svg" />
-                    <div class="window window-title">
+                    <img id="research-img" src="/assets/rolf/logo.svg" />
+                    <div class="window-container">
                         <h3>Research</h3>
                     </div>
                     <br/>
@@ -64,7 +62,7 @@
                         I first explored ROLF's site in full to understand who they are, what they do, and what they want their website to do. The ROLF website is meant to be a one-stop site for both people who are in need and people who wish to help and provide. Thus, I created three goals for my redesign.
                     </p>
                     <br />
-                    <div id="research-desc-window" class="window">
+                    <div id="research-desc-window" class="window-container">
                         <ol>
                             <li>
                                 As a charity organization's website, the redesign should be, above all, encouraging and hopeful to anyone who sees it. Those who are in need should be encouraged to reach out and ask for help. Those who aren't in need should be encouraged to reach out and provide help.
@@ -82,12 +80,12 @@
                 </section>
 
                 <section id="rolf-ideate">
-                    <div class="window window-title">
+                    <div class="window-container">
                         <h3>Ideate</h3>
                     </div>
                     <div id="rolf-wireframes">
-                        <img src="../assets/rolf/wireframe-home-1.png" />
-                        <img src="../assets/rolf/wireframe-home-2.png" />
+                        <img src="/assets/rolf/wireframe-home-1.png" />
+                        <img src="/assets/rolf/wireframe-home-2.png" />
                         <div class="fade-white-top"></div>
                         <div class="fade-white-bottom"></div>
                     </div>
@@ -101,13 +99,9 @@
                     </p>
                 </section>
 
-                <section id="rolf-design" class="dark">
-                    <div class="dark-start">
-                        <img class="dark-cloud-left" src="../assets/project-start-cloud-left.svg" />
-                        <img class="dark-cloud-right" src="../assets/project-start-cloud-right.svg" />
-                    </div>
-                    <div id="rolf-design-content-glow">
-                        <div class="window window-title">
+                <section id="rolf-design" class="dark-section">
+                    <div id="rolf-design-content-glow" class="container">
+                        <div class="window-container">
                             <h3>Design</h3>
                         </div>
                         <br/>
@@ -115,7 +109,7 @@
                             I decided to use Figma to bring the wireframes to a full design. I also chose to stick with ROLF's original color scheme and many of the fonts they used. Even in this phase, I found some design choices that didn't work when I fully fleshed them out. The homepage took many iterations and feedback from my professor and classmates before I finally settled on this design. Still, I enjoyed the process of working through these challenges with the help of my peers.
                         </p>
                         <br />
-                        <div id="rolf-design-window" class="window">
+                        <div id="rolf-design-window" class="window-container">
                             <div id="rolf-design-window-buttons">
                                 <button class="active" onclick="setImage(this, 'home')">Homepage</button>
                                 <button onclick="setImage(this, 'about')">About Us</button>
@@ -123,19 +117,17 @@
                                 <button onclick="setImage(this, 'volunteer')">Volunteer</button>
                             </div>
                             <div id="rolf-design-window-window">
-                                <img id="rolf-design-window-image" src="../assets/rolf/home.jpg" />
+                                <img id="rolf-design-window-image" src="/assets/rolf/home.jpg" />
                             </div>
                         </div>
-                    </div>
-                    <div id="rolf-design-content-bottom">
+
+                        <br />
                         <p>
                             As a website design that did not require development and implementation, I could push my creativity into unique styles and layouts that would usually be limited by time if I needed to code it. The process also familiarized me with using Figma and creating vector graphics. As one of the first few website layouts that I journeyed through the entire design process to create, I learned much about the formal practice of designing websites, and I have only grown more excited to create more.
                         </p>
                     </div>
-                    <div class="dark-end">
-                        <img class="dark-cloud-left" src="../assets/project-end-cloud-left.svg" />
-                        <img class="dark-cloud-right" src="../assets/project-end-cloud-right.svg" />
-                    </div>
+
+                        
                 </section>
 
             </div>
@@ -150,7 +142,7 @@
                     button.classList.remove("active");
                 }
                 clickedButton.classList.add("active");
-                document.getElementById("rolf-design-window-image").setAttribute("src", "../assets/rolf/" + imageName + ".jpg")
+                document.getElementById("rolf-design-window-image").setAttribute("src", "/assets/rolf/" + imageName + ".jpg")
             }
         </script>
     </body>

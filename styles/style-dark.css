@@ -1,0 +1,146 @@
+.dark-section {
+}
+
+.dark-start {
+    width: 100%;
+    height: 25vw;
+    max-height: 300px;
+    min-height: 200px;
+    margin-bottom: -1px;
+    position: relative;
+}
+
+.dark-start > * {
+    position: absolute;
+    height: 25vw;
+    max-height: 300px;
+    min-height: 200px;
+    bottom:0px;
+}
+
+.dark-start > .dark-cloud-left {
+    left: 0px;
+}
+
+.dark-start > .dark-cloud-right {
+    right: 0px;
+}
+
+.dark-end {
+    width: 100%;
+    height: 5px;
+    position: relative;
+}
+
+.dark-end > * {
+    position: absolute;
+    height: 10vw;
+    min-height: 100px;
+    bottom: 0px;
+}
+
+.dark-end > .dark-cloud-left {
+    left: 0px;
+}
+
+.dark-end > .dark-cloud-right {
+    right: 0px;
+}
+
+.dark-section::after {
+    content:"";
+    display: block;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to bottom, #ffffff , #ffffff00);
+}
+
+
+@keyframes bg-cloud-float-dark {
+    0% {background-position: 0px 0px, 0px 10px, 0 0}
+    100% {background-position: 0px 10px, 0px 0px, 0 0}
+}
+
+
+.dark-body {
+    --text-color: white;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: #0A3889;
+    background-image: linear-gradient(#2661ca 0, #0A3889 200px);
+    background:
+        0 0 / 100% auto repeat-y url("/assets/bg/dark-clouds-1.svg"),
+        0 0 / 100% auto repeat-y url("/assets/bg/dark-clouds-2.svg"),
+        linear-gradient(#2661ca 0, #0A3889 200px);
+
+    background-color: #0a398975;
+    background-blend-mode: lighten;
+    animation: bg-cloud-float-dark 2s infinite alternate ease-in-out;
+
+    padding-top: 100px;
+    padding-bottom: 140px;
+    min-height: 400px;
+
+    color: var(--text-color);
+
+    & a {
+        color: var(--text-color);
+        border-bottom-color: var(--text-color);
+    }
+
+    & a:hover {
+        color: var(--text-color);
+        background-color: #a8b0ec56
+    }
+
+    & a.window-link { border: none; }
+    & a.window-link:hover { background: none; }
+
+    & a:active {
+        color: var(--text-color);
+        background-color: #ffe1f280
+    }
+
+    & .text-important {
+        color: #A8B0EC;
+    }
+
+    & .highlight, .highlight-type {
+        background-color: #539aea81;
+    }
+
+
+    & .window {
+        color: var(--text-color);
+        border-color: #ffe1f2;
+        background-color: rgba(66, 104, 180, 0.212);
+    }
+
+    & .window:hover {
+        background-color: rgba(66, 104, 180, 0.395);
+        box-shadow: 0 10px 10px #A8B0EC86;
+    }
+
+    & .window-head {
+        color: #2661ca;
+        border-color: #ffe1f2;
+        background: linear-gradient(43deg, #539aeab1 68%, #a8b0ecb1 69%, #a8b0ecb1 78%, #ffe1f2b1 79%, #ffe1f2b1 100%);
+    }
+
+    & .window-image {
+        border-color: #ffe1f2;
+    }
+
+
+    & .acc-button:hover {
+        color: var(--text-color);
+    }
+
+    & .acc-body {
+        color: #A8B0EC;
+        border-left-color: #1E5FCA;
+    }
+
+}
