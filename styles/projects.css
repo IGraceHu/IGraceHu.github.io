@@ -22,16 +22,9 @@
     min-height: 200px;
 }
 
-.project-window-logo {
-    float: right;
-    position: absolute;
-    bottom: 0;
-    right: -50px;
-    margin: 10px;
-    opacity: 0.5;
-    max-width: 400px;
-    z-index: -1;
-
+.project-window-img {
+    width: 100%;
+    margin-top: 10px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -40,7 +33,7 @@
     }
 }
 
-#iajes-project-window .window, #iajes-project-window .window-head {
+#iajes-project-window .window, #iajes-project-window .window-head, #iajes-project-window .window-image {
     color: #136E8D;
     border-color: #136E8D;
 }
@@ -64,7 +57,7 @@
 
 
 
-#rolf-project-window .window, #rolf-project-window .window-head {
+#rolf-project-window .window, #rolf-project-window .window-head, #rolf-project-window .window-image {
     color: #1F8AA0;
     border-color: #1F8AA0;
     transition: color 0.2s, margin 0.6s, box-shadow 0.6s, background-color 0.6s;

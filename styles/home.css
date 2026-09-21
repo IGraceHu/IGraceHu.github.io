@@ -55,28 +55,43 @@
 }
 
 #about-window-1 {
-    width: 330px;
+    width: fit-content;
     position: absolute;
     top: 120px;
     right:0;
     /* transition: 0.2s; */
 }
 
+#about-window-1 > .window {
+    width: 330px;
+    min-width: 330px;
+}
+
 #about-window-2 {
-    width: 300px;
+    width: fit-content;
     position: absolute;
     top: 350px;
     left: 40px;
     /* transition: 0.2s; */
 }
 
+#about-window-2 > .window {
+    width: 300px;
+    min-width: 300px;
+}
+
 #about-window-3 {
-    width: 250px;
+    width: fit-content;
     position: absolute;
     
     top: 540px;
     right: -20px;
     /* transition: 0.2s; */
+}
+
+#about-window-3 > .window {
+    width: 250px;
+    min-width: 250px;
 }
 
 @media screen and (max-width: 800px) {
@@ -181,17 +196,9 @@
     min-height: 200px;
 }
 
-.project-window-logo {
-    float: right;
-    position: absolute;
-    bottom: 0;
-    right: -50px;
-    margin: 10px;
-    filter: brightness(200%);
-    opacity: 0.9;
-    max-width: 400px;
-    z-index: -1;
-
+.project-window-img {
+    width: 100%;
+    margin-top: 10px;
 }
 
 
