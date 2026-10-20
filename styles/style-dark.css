@@ -102,6 +102,10 @@
         color: var(--text-color);
         background-color: #ffe1f280
     }
+    & a:active {
+        color: var(--text-color);
+        background-color: #ffe1f280
+    }
 
     & .text-important {
         color: #A8B0EC;

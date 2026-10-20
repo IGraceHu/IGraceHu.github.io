@@ -178,8 +178,8 @@
 
 #projects-container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    align-items: center;;
+    grid-template-columns: auto auto;
+    align-items: center;
     gap: 40px;
 }
 

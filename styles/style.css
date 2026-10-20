@@ -762,7 +762,7 @@ nav a {
     transition: 0.2s;
 }
 
-#footer-links a {
+#footer-links a, .arrow-link {
     display: inline-flex;
     align-items: center;
 }

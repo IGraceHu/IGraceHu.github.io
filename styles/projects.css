@@ -99,9 +99,11 @@
 
 .text-col-small {
     padding: 0 10vw;
+    box-sizing: border-box;
 }
 
 #iajes-main-container {
+    position: relative;
     padding: 100px 0 10vw 0;
 }
 
@@ -325,7 +327,10 @@
     }
 }
 
-
+#iajes-end > * {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
 
 
 
