@@ -1,7 +1,7 @@
-import { MailIcon, PhoneIcon, ArrowIcon } from "@/components/icons";
+import { MailIcon, PhoneIcon, ArrowIcon, ChevronIcon } from "@/components/icons";
 import { Window } from "@/components/window";
 import Header from "@/components/header";
-import Accordion from '@mui/material/Accordion';
+import { FunctionAccordion } from '@/components/accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 
@@ -62,8 +62,10 @@ export default function Resume({}) {
                             <h2>Professional Experience</h2>
                             <div>
                                 <p className="text-purple">// October 2024 - April 2025</p>
-                                <Accordion className="accordion">
-                                    <AccordionSummary><span><strong>IT Web Developer</strong> | Wus Printed Circuit Co., Ltd</span></AccordionSummary>
+                                <FunctionAccordion className="accordion">
+                                    <AccordionSummary
+                                        expandIcon={<ChevronIcon size="24" color="#A8B0EC" />}
+                                    ><p className="summary-text"><strong>IT Web Developer</strong> | Wus Printed Circuit Co., Ltd</p></AccordionSummary>
                                     <AccordionDetails>
                                         <ul>
                                             <li>Developed 8 new supporting pages for the internal administration application for usability and productivity.</li>
@@ -71,13 +73,15 @@ export default function Resume({}) {
                                             <li>Communicated with multiple teams for feedback on administration functions to improve user experience.</li>
                                         </ul>
                                     </AccordionDetails>
-                                </Accordion>
+                                </FunctionAccordion>
                             </div>
                             <br/>
                             <div>
                                 <p className="text-purple">// July 2021 - March 2024</p>
-                                <Accordion className="accordion">
-                                    <AccordionSummary><span><strong>Software Engineer Intern</strong> | eWorld Enterprise Solutions</span></AccordionSummary>
+                                <FunctionAccordion className="accordion">
+                                    <AccordionSummary
+                                        expandIcon={<ChevronIcon size="24" color="#A8B0EC" />}
+                                    ><span className="summary-text"><strong>Software Engineer Intern</strong> | eWorld Enterprise Solutions</span></AccordionSummary>
                                     <AccordionDetails>
                                         <ul>
                                             <li>Developed conversational user interfaces in Google Dialogflow ES and CX for the Hawai'i Department of Health for healthcare aid and information accessibility during COVID-19.</li>
@@ -85,7 +89,7 @@ export default function Resume({}) {
                                             <li>Mentored new BAs and developers on the team on ServiceNow basics and internal functions.</li>
                                         </ul>
                                     </AccordionDetails>
-                                </Accordion>
+                                </FunctionAccordion>
                             </div>
                         </div>
 

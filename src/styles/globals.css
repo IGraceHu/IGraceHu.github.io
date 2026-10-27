@@ -127,7 +127,7 @@ a.link.active:hover {
 
 
 
-button, .button {
+.button {
     padding: 10px;
     border: 3px solid #2661ca;
     border-radius: 10px;
@@ -139,7 +139,7 @@ button, .button {
   width: 32px;
 }
 
-button:hover, .button:hover {
+.button:hover {
     color: #539aea;
     border-color: #539aea;
     cursor: pointer;
@@ -672,44 +672,6 @@ footer {
     margin-bottom: 10px;
 }
 
-
-
-/* ACCORDION */
-.MuiPaper-root.MuiPaper-elevation {
-    box-shadow: none;
-    color: #0A3889;
-}
-
-.accordion button.MuiAccordionSummary-root {
-    padding: 0;
-    min-height: unset;
-}
-
-.accordion span.MuiAccordionSummary-content {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.MuiAccordionSummary-content.Mui-expanded {
-    margin: unset;
-}
-
-.MuiCollapse-root {
-    border-left: 2px solid #ffe1f2;
-}
-
-.accordion::after {
-    content:"}";
-    font-size: 1rem;
-    color: #539AEA;
-}
-
-.MuiAccordionSummary-content::after {
-    content:" {···";
-    color: #539AEA;
-    margin-left: 1rem;
-}
-
-.MuiAccordionSummary-content.Mui-expanded::after {
-    content:" {";
+.MuiPaper-root {
+    color: unset;
 }

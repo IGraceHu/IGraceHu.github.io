@@ -59,3 +59,40 @@ export function ArrowIcon({color="#000", size=DEFAULT_SIZE, direction="right", c
         </svg>
     )
 }
+
+export function ChevronIcon({color="#000", size=DEFAULT_SIZE, direction="right", className}) {
+    let rotation = "rotate-none";
+    switch(direction) {
+        case "down-right":
+            rotation = "rotate-45";
+            break;
+        case "down":
+            rotation = "rotate-90";
+            break;
+        case "down-left":
+            rotation = "rotate-135";
+            break;
+        case "left":
+            rotation = "rotate-180";
+            break;
+        case "up-left":
+            rotation = "rotate-125";
+            break;
+        case "up":
+            rotation = "rotate-270";
+            break;
+        case "up-right":
+            rotation = "rotate-315";
+            break;
+        default:
+            break;
+    };
+
+    return (
+         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="12" r="1" fill={color}/>
+            <circle cx="15" cy="12" r="1" fill={color}/>
+            <path d="M9 18L15 12L9 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke={color}/>
+        </svg>
+    )
+}
