@@ -28,11 +28,11 @@ export default function Footer({}) {
                 </div>
                 <p id="footer-links">
                     <br/>
-                    * <ArrowLink href="/projects.html" color="#2661CA">Projects</ArrowLink>
+                    * <ArrowLink href="/projects" color="#2661CA">Projects</ArrowLink>
                     <br />
-                    * <ArrowLink href="/illustrations.html" color="#2661CA">Illustrations</ArrowLink>
+                    * <ArrowLink href="/illustrations" color="#2661CA">Illustrations</ArrowLink>
                     <br />
-                    * <ArrowLink href="/resume.html" color="#2661CA">Resume</ArrowLink>
+                    * <ArrowLink href="/resume" color="#2661CA">Resume</ArrowLink>
                 </p>
                 <br/>
             </Window>

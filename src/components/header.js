@@ -1,9 +1,9 @@
 import Window from "./window";
 
-export default function Header({children, small = false}) {
+export default function Header({children, small = false, url}) {
   return (
     <>
-        <div id="header">
+        <div id="header" className={small ? "small" : ''}>
             <div id="header-clouds">
                 <img className="header-cloud-left" src="/assets/bg/header-cloud-left.svg" />
                 <img className="header-cloud-right" src="/assets/bg/header-cloud-right.svg" />
@@ -12,7 +12,7 @@ export default function Header({children, small = false}) {
                 <img id="header-logo" src="/assets/logo-light.svg" />
             </div>
             <div id="header-window-wrapper">
-                <Window>
+                <Window url={url} className="min-w-100">
                     {children}
                 </Window>
             </div>
@@ -24,8 +24,8 @@ export default function Header({children, small = false}) {
             </div>
             <img id="nav-img" src="/assets/logo-small.svg" />
             <div id="nav-right">
-                <a href="/Illustrations" className="link">Artwork</a>
-                <a href="/Resume" className="link">Resume</a>
+                <a href="/illustrations" className="link">Artworks</a>
+                <a href="/resume" className="link">Resume</a>
             </div>
         </nav>
     </>

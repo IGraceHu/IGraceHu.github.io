@@ -9,6 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/lab": "^9.0.0-beta.10",
+    "@mui/material": "^9.5.0",
     "lightningcss-darwin-arm64": "^1.33.0",
     "next": "16.4.3",
     "react": "19.3.0",

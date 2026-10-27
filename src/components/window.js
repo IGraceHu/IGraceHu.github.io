@@ -1,6 +1,6 @@
 export function Window({className, children, url = null}) {
   return (
-    <div className={`window-container ${className || ''}`}>
+    <div className={`window-container transition ${className || ''}`}>
         <div className="window">
             <div className="window-head">
                 <div className="window-buttons">
@@ -20,7 +20,7 @@ export function Window({className, children, url = null}) {
 
 export function WindowLink({className, children, url = null, href=""}) {
   return (
-    <a className={`window-container ${className || ''}`} href={href}>
+    <a className={`window-container transition ${className || ''}`} href={href}>
         <div className="window">
             <div className="window-head">
                 <div className="window-buttons">
@@ -41,7 +41,7 @@ export function WindowLink({className, children, url = null, href=""}) {
 export default function WindowShrink({className, children, url = null}) {
     
     return (
-        <div className={`window-container ${className || ''}`}>
+        <div className={`window-container transition ${className || ''}`}>
             <div className="window">
                 <div className="window-head">
                     <div className="window-buttons">

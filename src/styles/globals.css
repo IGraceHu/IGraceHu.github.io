@@ -392,7 +392,7 @@ button:hover, .button:hover {
     bottom:0px;
 }
 
-#header-small > #header-clouds > * {
+#header.small > #header-clouds > * {
     height: 350px;
     transition: 0.5s;
 }
@@ -649,4 +649,67 @@ footer {
 
 #dorm {
     margin-top: 20%;
+}
+
+
+
+/* ILLUSTRATIONS */
+#illustrations-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    #illustrations-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+#illustrations-container img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+/* ACCORDION */
+.MuiPaper-root.MuiPaper-elevation {
+    box-shadow: none;
+    color: #0A3889;
+}
+
+.accordion button.MuiAccordionSummary-root {
+    padding: 0;
+    min-height: unset;
+}
+
+.accordion span.MuiAccordionSummary-content {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.MuiAccordionSummary-content.Mui-expanded {
+    margin: unset;
+}
+
+.MuiCollapse-root {
+    border-left: 2px solid #ffe1f2;
+}
+
+.accordion::after {
+    content:"}";
+    font-size: 1rem;
+    color: #539AEA;
+}
+
+.MuiAccordionSummary-content::after {
+    content:" {···";
+    color: #539AEA;
+    margin-left: 1rem;
+}
+
+.MuiAccordionSummary-content.Mui-expanded::after {
+    content:" {";
 }
