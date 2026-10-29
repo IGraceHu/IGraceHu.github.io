@@ -12,7 +12,7 @@ export default function Header({children, small = false, url}) {
                 <img id="header-logo" src="/assets/logo-light.svg" />
             </div>
             <div id="header-window-wrapper">
-                <Window url={url} className="min-w-100">
+                <Window url={url} className="mx-10">
                     {children}
                 </Window>
             </div>

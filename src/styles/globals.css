@@ -135,6 +135,10 @@ a.link.active:hover {
     font-family: 'Menlo', 'Courier New', Courier, monospace;
 }
 
+.button.plush {
+    padding: 10px 20px;
+}
+
 .button-icon {
   width: 32px;
 }

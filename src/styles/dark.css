@@ -136,14 +136,14 @@
         border-color: #ffe1f2;
     }
 
-
-    & .acc-button:hover {
-        color: var(--text-color);
+    & .button {
+        border-color: #ffe1f2;
+        background-color: #A8B0EC86;
     }
 
-    & .acc-body {
-        color: #A8B0EC;
-        border-left-color: #1E5FCA;
+    & .button:hover, .button.active {
+        color: var(--text-color);
+        border-color: #A8B0EC;
     }
 
 }
