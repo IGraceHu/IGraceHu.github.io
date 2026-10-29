@@ -6,14 +6,17 @@ export const WindowAccordion = styled(Accordion)(({ theme }) => ({
   boxShadow: "none",
   border: "3px solid #2661ca",
   borderRadius: "10px !important",
-  width: "400px",
+  // width: "500px",
+  // maxWidth: "100%",
   opacity: "0.7",
-  transition: "width 0.2s, opacity 0.2s",
+  transition: "0.4s",
+  color: "unset",
   '& .MuiAccordion-heading': {
     '& .MuiAccordionSummary-root': {
       position: "relative",
       padding: 0,
       minHeight: "unset",
+      transition: "width 0.2s, opacity 0.2s",
       '&.Mui-expanded': {
         minHeight: "unset",
       },
@@ -21,7 +24,8 @@ export const WindowAccordion = styled(Accordion)(({ theme }) => ({
         margin: "0",
         display: "block",
         '& .summary-text': {
-          padding: "20px 10px"
+          padding: "10px 20px",
+          margin:0,
         },
       },
       '& .MuiAccordionSummary-content.Mui-expanded': {
@@ -38,12 +42,16 @@ export const WindowAccordion = styled(Accordion)(({ theme }) => ({
     },
   },
   '& .MuiAccordionDetails-root': {
-    padding: "0 10px 20px 10px"
+    padding: "0 20px 20px"
   },
 
   '&.Mui-expanded': {
-    width: "100%",
     opacity: "1",
+    marginLeft: "0px",
+    marginRight: "0px",
+    '&  .MuiAccordionSummary-root:hover': {
+      opacity: "0.7",
+    },
   },
 
   '&:hover': {
@@ -53,8 +61,8 @@ export const WindowAccordion = styled(Accordion)(({ theme }) => ({
   },
 }));
 
-export const WindowHeader = ({url}) => {
-    return (<div className="window-head">
+export const WindowHeader = ({url, style}) => {
+    return (<div className="window-head" style={style}>
                 <div className="window-buttons">
                     <div></div>
                     <div></div>
@@ -68,6 +76,7 @@ export const WindowHeader = ({url}) => {
 export const FunctionAccordion = styled(Accordion)(({ theme }) => ({
   boxShadow: "none",
   marginLeft: "1rem !important",
+  color: "unset",
   '& .MuiAccordion-heading': {
     '& .MuiAccordionSummary-root': {
       position: "relative",
@@ -80,6 +89,9 @@ export const FunctionAccordion = styled(Accordion)(({ theme }) => ({
       '& .MuiAccordionSummary-content': {
         backgroundColor: "#539AEA33",
         margin: "0",
+        '&:hover': {
+            color: "#539AEA",
+        },
         '& > .summary-text::after': {
             content: '" {···"',
             color: "#539AEA",

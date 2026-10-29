@@ -161,7 +161,7 @@ a.link.active:hover {
   display: block;
   padding-top: 5px;
   padding-bottom: 0px;
-  transition: padding 0.6s;
+  transition: 0.6s;
 }
 
 .window-container:hover {
@@ -229,8 +229,6 @@ a.link.active:hover {
 }
 
 .window-image {
-    width: 100%;
-    margin-bottom: 10px;
     border: 3px solid #2661ca;
     border-radius: 10px;
     box-sizing: border-box;

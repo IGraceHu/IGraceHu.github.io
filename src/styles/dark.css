@@ -64,7 +64,7 @@
 
 
 .dark-body {
-    --text-color: white;
+    --text-color: rgb(238, 246, 255);
 
     position: relative;
     overflow: hidden;
@@ -110,6 +110,7 @@
     }
 
     & .highlight, .highlight-type {
+        color: var(--text-color);
         background-color: #539aea81;
     }
 

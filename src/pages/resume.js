@@ -81,7 +81,7 @@ export default function Resume({}) {
                                 <FunctionAccordion className="accordion">
                                     <AccordionSummary
                                         expandIcon={<ChevronIcon size="24" color="#A8B0EC" />}
-                                    ><span className="summary-text"><strong>Software Engineer Intern</strong> | eWorld Enterprise Solutions</span></AccordionSummary>
+                                    ><p className="summary-text"><strong>Software Engineer Intern</strong> | eWorld Enterprise Solutions</p></AccordionSummary>
                                     <AccordionDetails>
                                         <ul>
                                             <li>Developed conversational user interfaces in Google Dialogflow ES and CX for the Hawai'i Department of Health for healthcare aid and information accessibility during COVID-19.</li>
