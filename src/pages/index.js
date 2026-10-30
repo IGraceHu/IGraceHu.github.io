@@ -29,7 +29,7 @@ export default function Home() {
           </div>
 
           <div className="relative w-full flex flex-col items-center z-1">
-              <img className="w-140 pl-5" src="assets/portrait-full.png" />
+              <img className="w-140 pl-5" src="/assets/portrait-full.png" />
           </div>
 
           <div className="absolute top-30 w-full grid grid-cols-[300px_100px_300px] lg:grid-cols-[300px_300px_300px] justify-center hidden md:grid z-2">
