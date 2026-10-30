@@ -2,16 +2,6 @@
 
 * {box-sizing: border-box;}
 
-
-@theme {
-    --color-text: #0A3889;
-    --color-border: #2661CA;
-    --color-accent: #4582E6;
-    --color-blue: #539AEA;
-    --color-purple: #A8B0EC;
-    --color-pink: #FFE1F2;
-}
-
 body {
   background: #ffffff;
   font-family: 'Menlo', 'Courier New', Courier, monospace;
