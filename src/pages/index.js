@@ -2,16 +2,21 @@ import { Window, WindowLink } from "@/components/window";
 import DarkSection from "@/components/darksection";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <>
-      <Header>
+      <Head>
+        <title>Isabelle Hu</title>
+      </Head>
+
+      <Header route="home">
           <h1>
             Hello World!
             <br/><br/>
             You can call me <span className="highlight">Isabelle Hu</span>.
-    </h1>
+          </h1>
       </Header>
       <main>
         <section className="relative p-10 pt-20 pb-10">

@@ -3,6 +3,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import DarkSection from "@/components/darksection";
 import { useState } from "react";
+import Head from 'next/head';
+
 
 export default function RolfWebsiteRedesign({}) {
     const [view, setView] = useState(0);
@@ -10,7 +12,11 @@ export default function RolfWebsiteRedesign({}) {
 
     return (
         <>
-        <Header small>
+        <Head>
+            <title>River of Life Foundation Website Redesign</title>
+        </Head>
+
+        <Header small url="Isabelle Hu" route="project">
             <h1>
                 River Of Life Foundation Website Redesign
             </h1>

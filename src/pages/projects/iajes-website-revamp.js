@@ -1,10 +1,12 @@
-import { Window, WindowLink } from "@/components/window";
+import { Window } from "@/components/window";
 import { WindowAccordion, WindowHeader } from "@/components/accordion";
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { DarkSectionStart } from "@/components/darksection";
+import Head from 'next/head';
+
 
 export default function IajesWebsiteRevamp({}) {
     const wireframesList = [
@@ -33,13 +35,17 @@ export default function IajesWebsiteRevamp({}) {
     ]
     return (
         <>
-        <Header small>
+        <Head>
+            <title>IAJES Website Revamp</title>
+        </Head>
+
+        <Header small url="Isabelle Hu" route="projects">
             <h1>
                 IAJES Website Revamp
             </h1>
         </Header>
 
-        <main>
+        <main className="overflow-y-hidden">
             <DarkSectionStart className="grid grid-cols-1 sm:grid-cols-2 gap-10 px-10 md:px-20 lg:px-30 xl:px-60">
                 <p className="">
                     For my Senior Design Project at Santa Clara University, my team volunteered to revamp and improve the website of the <span className="highlight">International Association of Jesuit Engineering and Sciences (IAJES)</span> schools.

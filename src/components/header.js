@@ -1,6 +1,6 @@
 import Window from "./window";
 
-export default function Header({children, small = false, url}) {
+export default function Header({children, small = false, url, route}) {
   return (
     <>
         <div id="header" className={small ? "small" : ''}>
@@ -12,20 +12,20 @@ export default function Header({children, small = false, url}) {
                 <img id="header-logo" src="/assets/logo-light.svg" />
             </div>
             <div id="header-window-wrapper">
-                <Window url={url} className="mx-10">
+                <Window url={url} className="mx-10 min-w-100">
                     {children}
                 </Window>
             </div>
         </div>
         <nav id="nav">
             <div id="nav-left">
-                <a href="/" className="link">Home</a>
-                <a href="/projects" className="link">Projects</a>
+                <a href="/" className={"link" + (route == "home" ? " active" : "")}>Home</a>
+                <a href="/projects" className={"link" + (route == "projects" ? " active" : "")}>Projects</a>
             </div>
             <img id="nav-img" src="/assets/logo-small.svg" />
             <div id="nav-right">
-                <a href="/illustrations" className="link">Artworks</a>
-                <a href="/resume" className="link">Resume</a>
+                <a href="/illustrations" className={"link" + (route == "illustrations" ? " active" : "")}>Artworks</a>
+                <a href="/resume" className={"link" + (route == "resume" ? " active" : "")}>Resume</a>
             </div>
         </nav>
     </>

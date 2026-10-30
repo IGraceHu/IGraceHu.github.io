@@ -60,6 +60,12 @@ li {
     margin-left: 13px;
 }
 
+ul.asterisk > li::before {
+    content: "* ";
+    position: absolute;
+    margin-left: -2ch;
+}
+
 a.link {
     line-height: 28px;
     text-decoration: none;
@@ -75,20 +81,21 @@ a.link:hover {
     background-color: #a8b0ec43
 }
 
-a.link:active {
+a.link.active {
     color: #7884B8;
     border-bottom-color:#7884B8;
     background-color: #ffe1f280
 }
 
-a.link.active {
+/* a.link.active {
     color: #539aea;
+    border-bottom-color:#539aea;
 }
 
 a.link.active:hover {
     color: #539aea;
     cursor: default;
-}
+} */
 
 
 

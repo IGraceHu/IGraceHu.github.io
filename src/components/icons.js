@@ -96,3 +96,14 @@ export function ChevronIcon({color="#000", size=DEFAULT_SIZE, direction="right",
         </svg>
     )
 }
+
+
+export function CopyIcon({color="#000", size=DEFAULT_SIZE, className}) {
+    return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M17 14C18.1046 14 19 13.1046 19 12L19 6C19 4.89543 18.1046 4 17 4L11 4C9.89543 4 9 4.89543 9 6" strokeWidth="2" strokeLinecap="round" stroke={color}/>
+            <path d="M4 15L4 11C4 9.89543 4.89543 9 6 9L12 9C13.1046 9 14 9.89543 14 11L14 17C14 18.1046 13.1046 19 12 19L8 19" strokeWidth="2" strokeLinecap="round" stroke={color}/>
+            <circle cx="4.45" cy="18.55" r="1" transform="rotate(-90 4.45 18.55)" fill={color}/>
+        </svg>
+    )
+}

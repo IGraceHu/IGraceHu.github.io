@@ -4,12 +4,18 @@ import Header from "@/components/header";
 import { FunctionAccordion } from '@/components/accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
+import Head from 'next/head';
+
 
 
 export default function Resume({}) {
     return (
         <>
-        <Header small>
+        <Head>
+            <title>Isabelle Hu's Resume</title>
+        </Head>
+
+        <Header small url="Isabelle Hu" route="resume">
             <h1>
                 My <span className="highlight">Resume</span>
             </h1>
@@ -67,7 +73,7 @@ export default function Resume({}) {
                                         expandIcon={<ChevronIcon size="24" color="#A8B0EC" />}
                                     ><p className="summary-text"><strong>IT Web Developer</strong> | Wus Printed Circuit Co., Ltd</p></AccordionSummary>
                                     <AccordionDetails>
-                                        <ul>
+                                        <ul className="asterisk">
                                             <li>Developed 8 new supporting pages for the internal administration application for usability and productivity.</li>
                                             <li>Upgraded outdated administration functions for the migration to a new administration application, increasingclarity and efficiency for user experience and documentation for future development.</li>
                                             <li>Communicated with multiple teams for feedback on administration functions to improve user experience.</li>
@@ -83,7 +89,7 @@ export default function Resume({}) {
                                         expandIcon={<ChevronIcon size="24" color="#A8B0EC" />}
                                     ><p className="summary-text"><strong>Software Engineer Intern</strong> | eWorld Enterprise Solutions</p></AccordionSummary>
                                     <AccordionDetails>
-                                        <ul>
+                                        <ul className="asterisk">
                                             <li>Developed conversational user interfaces in Google Dialogflow ES and CX for the Hawai'i Department of Health for healthcare aid and information accessibility during COVID-19.</li>
                                             <li>Created an external tool to enable and aid Dialogflow version control, team collaboration, and iterative design.</li>
                                             <li>Mentored new BAs and developers on the team on ServiceNow basics and internal functions.</li>
