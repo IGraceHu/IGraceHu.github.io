@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Head from 'next/head';
 
+
 export default function Home() {
   return (
     <>
@@ -18,7 +19,7 @@ export default function Home() {
             You can call me <span className="highlight">Isabelle Hu</span>.
           </h1>
       </Header>
-      <main>
+      <main className="overflow-y-hidden">
         <section className="relative p-10 pt-20 pb-10">
           <div id="about-bg">
               <div id="about-bg-wrapper">

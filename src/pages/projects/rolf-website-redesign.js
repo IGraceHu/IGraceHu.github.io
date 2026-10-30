@@ -16,13 +16,13 @@ export default function RolfWebsiteRedesign({}) {
             <title>River of Life Foundation Website Redesign</title>
         </Head>
 
-        <Header small url="Isabelle Hu" route="project">
+        <Header small url="Isabelle Hu" route="projects">
             <h1>
                 River Of Life Foundation Website Redesign
             </h1>
         </Header>
 
-        <main>
+        <main className="overflow-y-hidden">
             <section className="mx-10 sm:mx-20 md:mx-30 xl:mx-60 mt-30">
                 <p>
                     For my Website Graphic Design course, we were tasked to redesign a non-profit organization's website. I picked River of Life Foundation, aiming to push the motif of river and water to create a unique and and modern identity for ROLF.

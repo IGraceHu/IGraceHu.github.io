@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function Window({className, children, url = null}) {
   return (
     <div className={`window-container transition ${className || ''}`}>
@@ -20,7 +22,7 @@ export function Window({className, children, url = null}) {
 
 export function WindowLink({className, children, url = null, href=""}) {
   return (
-    <a className={`window-container transition ${className || ''}`} href={href}>
+    <Link className={`window-container transition ${className || ''}`} href={href}>
         <div className="window">
             <div className="window-head">
                 <div className="window-buttons">
@@ -34,7 +36,7 @@ export function WindowLink({className, children, url = null, href=""}) {
                 {children}
             </div>
         </div>
-    </a>
+    </Link>
   );
 }
 

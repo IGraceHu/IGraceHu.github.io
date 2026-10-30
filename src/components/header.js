@@ -1,4 +1,5 @@
 import Window from "./window";
+import Link from 'next/link';
 
 export default function Header({children, small = false, url, route}) {
   return (
@@ -19,13 +20,13 @@ export default function Header({children, small = false, url, route}) {
         </div>
         <nav id="nav">
             <div id="nav-left">
-                <a href="/" className={"link" + (route == "home" ? " active" : "")}>Home</a>
-                <a href="/projects" className={"link" + (route == "projects" ? " active" : "")}>Projects</a>
+                <Link href="/" className={"link" + (route == "home" ? " active" : "")}>Home</Link>
+                <Link href="/projects" className={"link" + (route == "projects" ? " active" : "")}>Projects</Link>
             </div>
             <img id="nav-img" src="/assets/logo-small.svg" />
             <div id="nav-right">
-                <a href="/illustrations" className={"link" + (route == "illustrations" ? " active" : "")}>Artworks</a>
-                <a href="/resume" className={"link" + (route == "resume" ? " active" : "")}>Resume</a>
+                <Link href="/illustrations" className={"link" + (route == "illustrations" ? " active" : "")}>Artworks</Link>
+                <Link href="/resume" className={"link" + (route == "resume" ? " active" : "")}>Resume</Link>
             </div>
         </nav>
     </>

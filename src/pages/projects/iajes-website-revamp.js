@@ -210,7 +210,7 @@ export default function IajesWebsiteRevamp({}) {
                 <Window className="max-w-170 mx-10 md:mx-auto my-20 text-center">
                     <br/>
                     <h3>
-                        <a className="link" href="iajes.org">Visit the IAJES site!</a>
+                        <a className="link" href="https://www.iajes.org" target="_blank">Visit the IAJES site!</a>
                     </h3>
                     <br/>
                 </Window>

@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <>
         <Head>
-            <title>Isabelle Hu's Project</title>
+            <title>Isabelle Hu's Projects</title>
         </Head>
 
         <Header small url="Isabelle Hu" route="projects">
@@ -16,7 +16,7 @@ export default function Projects() {
                 My <span className="highlight">Projects</span>
             </h1>
         </Header>
-        <main>
+        <main className="overflow-y-hidden">
             <section className="relative px-10 sm:px-30 pt-20 pb-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 my-10">
                     <WindowLink href="/projects/iajes-website-revamp" className="iajes-theme">

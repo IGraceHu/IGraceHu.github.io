@@ -21,7 +21,7 @@ export default function Resume({}) {
             </h1>
         </Header>
 
-        <main>
+        <main className="overflow-y-hidden">
             <section className="relative px-10 lg:px-30 py-20">
                 <Window>
                     <div id="footer-image-container" className="block md:float-left m-6 ml-auto md:ml-0">

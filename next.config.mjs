@@ -15,8 +15,7 @@
 
 const nextConfig = {
   output: 'export',
-  assetPrefix: './', 
-  // basePath: process.env.PAGES_BASE_PATH,
+  trailingSlash: true,
   images: {
     unoptimized: true, 
   },

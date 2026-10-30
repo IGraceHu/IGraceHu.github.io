@@ -16,7 +16,7 @@ export default function Illustrations() {
                 My <span className="highlight">Artworks</span>
             </h1>
         </Header>
-        <main>
+        <main className="overflow-y-hidden">
             <section className="relative px-10 sm:px-30 pt-20 pb-10">
                 <Masonry columns={3} spacing={2}>
                     <img src="/images/blooming-fields.png" />
